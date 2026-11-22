@@ -45,6 +45,17 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           NPM_CONFIG_PROVENANCE: 'true'
+      # A package's first version goes to `latest` (changesets does that for packages never released);
+      # during pre-release mode the pre tag (`rc`) must point at the new versions too, as the docs say.
+      - if: ${{ !inputs.dry-run && hashFiles('.changeset/pre.json') != '' }}
+        run: |
+          tag="$(node -p "require('./.changeset/pre.json').tag")"
+          for manifest in packages/*/package.json; do
+            spec="$(node -p "const p = require('./$manifest'); p.name + '@' + p.version")"
+            npm dist-tag add "$spec" "$tag"
+          done
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       # changesets publish creates @electron-agent-bridge/<package>@<version> tags locally; push them.
       - if: ${{ !inputs.dry-run }}
         run: git push origin --tags
