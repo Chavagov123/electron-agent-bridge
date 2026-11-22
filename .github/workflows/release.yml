@@ -28,8 +28,10 @@ jobs:
           registry-url: https://registry.npmjs.org
       # Fails fast on a missing, empty or expired token, in a dry run too (nothing is published here).
       - name: npm token works
+        # An assignment keeps npm's exit status (inside echo it would be lost).
         run: |
-          echo "Publishing as: $(npm whoami)"
+          user="$(npm whoami)"
+          echo "Publishing as: $user"
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - run: pnpm install --frozen-lockfile
