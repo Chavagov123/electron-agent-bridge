@@ -91,7 +91,7 @@
     }
   },
   "devDependencies": {
-    "electron": "45.0.0",
+    "electron": "45.4.1",
     "esbuild": "0.28.2"
   },
   "engines": {
