@@ -1,5 +1,9 @@
 # electron-agent-bridge
 
+[![npm](https://img.shields.io/npm/v/@electron-agent-bridge/electron/rc?label=npm%40rc)](https://www.npmjs.com/package/@electron-agent-bridge/electron)
+[![CI](https://github.com/Chavagov123/electron-agent-bridge/actions/workflows/ci.yml/badge.svg)](https://github.com/Chavagov123/electron-agent-bridge/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 Let AI agents, scripts and tests see and drive any Electron app: its pages, IPC, logs, network, state
 and main process. One bridge, three ways in: an **MCP server** for agents (Claude Code and other MCP
 hosts), the **`eab` CLI**, and a typed **Node API**, plus **YAML flows** for tests.
@@ -98,6 +102,7 @@ await app.call('action.run', { actions: [{ type: 'click', locator: { role: 'butt
 | `@electron-agent-bridge/electron` | in-app runtime (main process); `/register`, `/renderer` (`registerState`), `/inject` (Launch mode) |
 | `@electron-agent-bridge/mcp` | `eab-mcp` (MCP server over stdio) and the `eab` CLI |
 | `@electron-agent-bridge/client` | Node API: `connect`, `launch`, flows |
+| `@electron-agent-bridge/attach` | Attach mode: drive a running app's pages over `--remote-debugging-port` |
 | `@electron-agent-bridge/core`, `@electron-agent-bridge/engine`, `@electron-agent-bridge/page-agent` | protocol, engine and in-page agent (used by the others) |
 
 ## Development

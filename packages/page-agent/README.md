@@ -1,5 +1,9 @@
 # @electron-agent-bridge/page-agent
 
-In-page agent (isolated world) and main-world state hook. Dependency-free; built to IIFE strings.
+[![npm](https://img.shields.io/npm/v/@electron-agent-bridge/page-agent/rc?label=npm%40rc)](https://www.npmjs.com/package/@electron-agent-bridge/page-agent)
 
-Part of [electron-agent-bridge](https://github.com/Chavagov123/electron-agent-bridge#readme). Status: release candidate (install with `@rc`).
+The in-page agent of [electron-agent-bridge](https://github.com/Chavagov123/electron-agent-bridge#readme): the accessibility tree, refs, snapshots,
+find and actionability checks, plus the state hook, built into scripts the bridge runs in each page.
+You rarely install it yourself: it comes with [`@electron-agent-bridge/electron`](https://www.npmjs.com/package/@electron-agent-bridge/electron) and [`@electron-agent-bridge/mcp`](https://www.npmjs.com/package/@electron-agent-bridge/mcp).
+
+MIT licensed.
