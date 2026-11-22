@@ -1,4 +1,4 @@
-// Build the in-app runtime (@eab/electron) as it was at an older git ref, for the compatibility test
+// Build the in-app runtime (@electron-agent-bridge/electron) as it was at an older git ref, for the compatibility test
 // (an app running an older runtime, driven by the current client).
 //
 //   node e2e/compat/build-runtime.mjs <ref>      → prints the path of that runtime's dist/index.cjs
@@ -38,6 +38,6 @@ if (!existsSync(runtime) || !existsSync(register)) {
   run('pnpm', ['install', '--frozen-lockfile', '--ignore-scripts'], tree);
   run('pnpm', ['run', 'gen'], tree);
   run('pnpm', ['exec', 'tsc', '-b', join('packages', 'electron')], tree);
-  run('pnpm', ['--filter', '@eab/electron', 'run', 'build'], tree);
+  run('pnpm', ['--filter', '@electron-agent-bridge/electron', 'run', 'build'], tree);
 }
 process.stdout.write(`${runtime}\n`);

@@ -2,8 +2,8 @@ import { existsSync, mkdtempSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 
-import { connect, type BridgeClient } from '@eab/client';
-import { handshakeFileName, type LogEntry } from '@eab/core';
+import { connect, type BridgeClient } from '@electron-agent-bridge/client';
+import { handshakeFileName, type LogEntry } from '@electron-agent-bridge/core';
 import { buildSync } from 'esbuild';
 import { afterEach, describe, expect, it } from 'vitest';
 

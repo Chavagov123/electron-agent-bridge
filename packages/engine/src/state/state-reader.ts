@@ -11,8 +11,8 @@ import {
   type ErrorCode,
   type MethodData,
   type MethodInput,
-} from '@eab/core';
-import { STATE_KEY } from '@eab/page-agent';
+} from '@electron-agent-bridge/core';
+import { STATE_KEY } from '@electron-agent-bridge/page-agent';
 import { z } from 'zod';
 
 import { detachedError } from '../page/agent-pool.js';

@@ -1,4 +1,4 @@
-import type { Action, Envelope, MethodData } from '@eab/core';
+import type { Action, Envelope, MethodData } from '@electron-agent-bridge/core';
 
 import { ActionEngine } from '../action/action-engine.js';
 import { AgentPool } from '../page/agent-pool.js';

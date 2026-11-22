@@ -5,8 +5,8 @@ import {
   type Envelope,
   type MethodData,
   type MethodInput,
-} from '@eab/core';
-import type { ElementBox } from '@eab/page-agent';
+} from '@electron-agent-bridge/core';
+import type { ElementBox } from '@electron-agent-bridge/page-agent';
 import { z } from 'zod';
 
 import type { TargetDescriptor } from '../ports/target-source.js';

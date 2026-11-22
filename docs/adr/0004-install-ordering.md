@@ -5,7 +5,7 @@
 - Evidence: `spikes/s3-ordering` — PASS 16/16 (Windows, Electron 35/45, CJS and ESM mains)
 
 ## Decision
-1. Integrated: side-effect `import '@eab/electron/register'` as the first import (CJS and ESM verified).
+1. Integrated: side-effect `import '@electron-agent-bridge/electron/register'` as the first import (CJS and ESM verified).
 2. Launch (a): `NODE_OPTIONS=--require <inject>`. The inject installs **deferred**: try immediately, then wrap
    `Module._load` and retry on each load, then `process.nextTick`; unhook once installed.
 3. Launch (b): `--inspect-brk=0` plus `Debugger.setInstrumentationBreakpoint('beforeScriptExecution')`. Resume until

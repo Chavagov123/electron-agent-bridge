@@ -1,4 +1,4 @@
-import { ActionSchema, LocatorSchema, WaitConditionSchema } from '@eab/core';
+import { ActionSchema, LocatorSchema, WaitConditionSchema } from '@electron-agent-bridge/core';
 import { z } from 'zod';
 
 const Name = z.string().min(1).max(200);

@@ -1,4 +1,10 @@
-import { BridgeError, ok, type Envelope, type MethodData, type MethodInput } from '@eab/core';
+import {
+  BridgeError,
+  ok,
+  type Envelope,
+  type MethodData,
+  type MethodInput,
+} from '@electron-agent-bridge/core';
 
 type WindowInfo = MethodData<'app.info'>['windows'][number];
 type Bounds = WindowInfo['bounds'];

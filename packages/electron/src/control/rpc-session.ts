@@ -17,7 +17,7 @@ import {
   type MethodName,
   type RpcRequest,
   type RpcResponse,
-} from '@eab/core';
+} from '@electron-agent-bridge/core';
 
 import type { AuditSink } from '../audit/audit-log.js';
 import type { Authenticator } from './authenticator.js';

@@ -1,6 +1,6 @@
 ---
-'@eab/engine': patch
-'@eab/electron': patch
+'@electron-agent-bridge/engine': patch
+'@electron-agent-bridge/electron': patch
 ---
 
 Fixes found driving a large bundled app:

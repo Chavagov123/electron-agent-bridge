@@ -1,4 +1,4 @@
-import type { Locator } from '@eab/core';
+import type { Locator } from '@electron-agent-bridge/core';
 import { z } from 'zod';
 
 import type { PageAgentClient } from '../page/page-agent-client.js';

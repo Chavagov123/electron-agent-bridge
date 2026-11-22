@@ -84,7 +84,8 @@ module.exports = {
     },
     {
       name: 'client-does-not-import-runtime',
-      comment: 'client references @eab/electron/inject by resolved path only, never by import.',
+      comment:
+        'client references @electron-agent-bridge/electron/inject by resolved path only, never by import.',
       severity: 'error',
       from: { path: pkg('client') },
       to: { path: [pkg('electron'), pkg('engine'), pkg('page-agent'), pkg('mcp')] },
@@ -92,7 +93,7 @@ module.exports = {
     {
       name: 'mcp-goes-through-client',
       comment:
-        'mcp/cli talk to apps only through the BridgeApi in @eab/client (or @eab/attach, which returns one).',
+        'mcp/cli talk to apps only through the BridgeApi in @electron-agent-bridge/client (or @electron-agent-bridge/attach, which returns one).',
       severity: 'error',
       from: { path: pkg('mcp') },
       to: { path: [pkg('electron'), pkg('engine'), pkg('page-agent')] },
@@ -112,7 +113,7 @@ module.exports = {
     tsPreCompilationDeps: true,
     tsConfig: { fileName: 'tsconfig.base.json' },
     enhancedResolveOptions: {
-      conditionNames: ['@eab/source', 'import', 'require', 'node', 'default'],
+      conditionNames: ['@electron-agent-bridge/source', 'import', 'require', 'node', 'default'],
       exportsFields: ['exports'],
       extensions: ['.ts', '.js', '.cjs', '.mjs', '.json'],
     },

@@ -1,4 +1,4 @@
-# @eab/page-agent
+# @electron-agent-bridge/page-agent
 
 In-page agent (isolated world) and main-world state hook. Dependency-free; built to IIFE strings.
 

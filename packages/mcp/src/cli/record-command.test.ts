@@ -2,7 +2,7 @@ import { mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 
-import { parseFlow } from '@eab/client';
+import { parseFlow } from '@electron-agent-bridge/client';
 import { afterEach, describe, expect, it } from 'vitest';
 
 import type { ClientApi } from '../session/session-manager.js';

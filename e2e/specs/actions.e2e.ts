@@ -2,8 +2,8 @@ import { existsSync, mkdtempSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 
-import { connect, type BridgeClient } from '@eab/client';
-import { handshakeFileName, type Action } from '@eab/core';
+import { connect, type BridgeClient } from '@electron-agent-bridge/client';
+import { handshakeFileName, type Action } from '@electron-agent-bridge/core';
 import { afterEach, describe, expect, it } from 'vitest';
 
 import { versionModes } from '../harness/modes.js';

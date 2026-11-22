@@ -1,4 +1,4 @@
-import { LocatorSchema } from '@eab/core';
+import { LocatorSchema } from '@electron-agent-bridge/core';
 import { z } from 'zod';
 
 import { renderLimitations } from '../render/text.js';

@@ -1,6 +1,6 @@
 import { EventEmitter } from 'node:events';
 
-import { LogBook } from '@eab/engine';
+import { LogBook } from '@electron-agent-bridge/engine';
 import type { App, WebContents } from 'electron';
 import { afterEach, describe, expect, it } from 'vitest';
 

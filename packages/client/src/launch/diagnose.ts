@@ -1,4 +1,4 @@
-import { BridgeError } from '@eab/core';
+import { BridgeError } from '@electron-agent-bridge/core';
 
 import type { LaunchStrategy } from './environment.js';
 
@@ -30,7 +30,7 @@ const CAUSES: Record<LaunchStrategy, string> = {
 };
 
 const INTEGRATED_HINT =
-  "Use Integrated mode: add `import '@eab/electron/register'` as the first import of the app's main " +
+  "Use Integrated mode: add `import '@electron-agent-bridge/electron/register'` as the first import of the app's main " +
   'process and start it with EAB_ENABLE=1 (docs/modes.md).';
 
 /**

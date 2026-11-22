@@ -14,8 +14,8 @@ import {
   type RecordedEvent,
   type ResolvedElement,
   type StepResult,
-} from '@eab/core';
-import { RECORD_BINDING } from '@eab/page-agent';
+} from '@electron-agent-bridge/core';
+import { RECORD_BINDING } from '@electron-agent-bridge/page-agent';
 import { z } from 'zod';
 
 import type { AgentPool } from '../page/agent-pool.js';

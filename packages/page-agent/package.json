@@ -1,5 +1,5 @@
 {
-  "name": "@eab/page-agent",
+  "name": "@electron-agent-bridge/page-agent",
   "version": "1.1.0-rc.0",
   "description": "In-page agent (isolated world) and main-world state hook. Dependency-free; built to IIFE strings.",
   "license": "MIT",
@@ -24,7 +24,7 @@
   "module": "./dist/index.js",
   "exports": {
     ".": {
-      "@eab/source": "./src/index.ts",
+      "@electron-agent-bridge/source": "./src/index.ts",
       "import": {
         "types": "./dist/index.d.ts",
         "default": "./dist/index.js"
@@ -44,7 +44,7 @@
     "check:package": "publint --strict && attw --pack . --profile node16"
   },
   "devDependencies": {
-    "@eab/core": "workspace:*"
+    "@electron-agent-bridge/core": "workspace:*"
   },
   "engines": {
     "node": ">=22"

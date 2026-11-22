@@ -1,4 +1,4 @@
-import type { WaitCondition } from '@eab/core';
+import type { WaitCondition } from '@electron-agent-bridge/core';
 import { describe, expect, it } from 'vitest';
 
 import { AgentPool } from '../page/agent-pool.js';

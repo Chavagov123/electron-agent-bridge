@@ -3,8 +3,8 @@ import { existsSync, readFileSync } from 'node:fs';
 import { createRequire } from 'node:module';
 import { dirname, join } from 'node:path';
 
-import { connect, type BridgeClient } from '@eab/client';
-import { handshakeFileName } from '@eab/core';
+import { connect, type BridgeClient } from '@electron-agent-bridge/client';
+import { handshakeFileName } from '@electron-agent-bridge/core';
 import { afterEach, beforeAll, describe, expect, it } from 'vitest';
 
 import { selectedVersions } from '../harness/electron-versions.js';
@@ -22,7 +22,7 @@ beforeAll(() => {
 
 describe.each(
   selectedVersions().flatMap((electron) => variants.map((variant) => [electron, variant] as const)),
-)('bundled main on Electron %s (@eab/electron %s)', (electron, variant) => {
+)('bundled main on Electron %s (@electron-agent-bridge/electron %s)', (electron, variant) => {
   let endpoint: IsolatedEndpoint | undefined;
   let app: LaunchedFixture | undefined;
   let client: BridgeClient | undefined;
@@ -37,7 +37,7 @@ describe.each(
   it('works as when installed unbundled: pages, snapshots and IPC from both sides', async () => {
     const bundle = readFileSync(join(fixture, 'dist', `${variant}.cjs`), 'utf8');
     // The variant is what it claims: the runtime inside the bundle, or required at run time.
-    expect(bundle.includes('require("@eab/electron')).toBe(variant === 'external');
+    expect(bundle.includes('require("@electron-agent-bridge/electron')).toBe(variant === 'external');
     endpoint = isolatedEndpoint();
     app = await launchFixture({
       fixture: 'app-bundled',

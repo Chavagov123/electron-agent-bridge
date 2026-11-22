@@ -5,7 +5,7 @@
  * Bundled by scripts/build-preload.mjs into a self-contained script; it may only require `electron`
  * (sandboxed preloads cannot load anything else).
  */
-import { shapeOf } from '@eab/core';
+import { shapeOf } from '@electron-agent-bridge/core';
 import { contextBridge, ipcRenderer } from 'electron';
 
 /** One uplink message: records since the last one, how many did not fit, and which preload sent it. */

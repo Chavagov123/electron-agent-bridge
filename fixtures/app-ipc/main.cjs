@@ -2,7 +2,7 @@
 // First: the bridge (off unless EAB_ENABLE=1). Values of `settings:*` are recorded (redacted) to test
 // the opt-in; every other channel is shape-only. In Launch-mode tests the launcher injects the bridge.
 if (process.env.EAB_FIXTURE_MODE !== 'launch') {
-  require('@eab/electron').enableAgentBridge({ ipc: { values: ['settings:*'] } });
+  require('@electron-agent-bridge/electron').enableAgentBridge({ ipc: { values: ['settings:*'] } });
 }
 const path = require('node:path');
 const { BrowserWindow, MessageChannelMain, ipcMain, utilityProcess } = require('electron');

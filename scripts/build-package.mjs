@@ -5,7 +5,7 @@
 // - --self-contained: bundle everything except peer dependencies (the in-app runtime ships no runtime deps).
 // - --bin <entry>: an executable ESM entry with a shebang (repeatable).
 // - --cjs <entry>: an entry built as CommonJS only, e.g. a `--require` preload (repeatable).
-// Workspace imports resolve through the `@eab/source` condition, so builds never depend on other dists.
+// Workspace imports resolve through the `@electron-agent-bridge/source` condition, so builds never depend on other dists.
 import { cpSync, existsSync, readFileSync, readdirSync, rmSync, statSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { build } from 'esbuild';
@@ -41,7 +41,7 @@ const common = {
   platform: 'node',
   target: 'node22',
   sourcemap: true,
-  conditions: ['@eab/source'],
+  conditions: ['@electron-agent-bridge/source'],
   external,
   logLevel: 'warning',
   outdir: 'dist',

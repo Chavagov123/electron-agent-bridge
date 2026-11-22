@@ -1,5 +1,5 @@
 // @vitest-environment happy-dom
-import type { Locator } from '@eab/core';
+import type { Locator } from '@electron-agent-bridge/core';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { isDisabled, isEditable, nextFrame } from './actionability.js';

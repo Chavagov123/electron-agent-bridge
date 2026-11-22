@@ -1,4 +1,9 @@
-import { ActionSchema, WaitConditionSchema, type ActionType, type WaitCondition } from '@eab/core';
+import {
+  ActionSchema,
+  WaitConditionSchema,
+  type ActionType,
+  type WaitCondition,
+} from '@electron-agent-bridge/core';
 import { z } from 'zod';
 
 /**

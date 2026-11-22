@@ -1,5 +1,5 @@
-import { BridgeError, type DetachReason } from '@eab/core';
-import type { CdpEvent, CdpTransport, Disposable } from '@eab/engine';
+import { BridgeError, type DetachReason } from '@electron-agent-bridge/core';
+import type { CdpEvent, CdpTransport, Disposable } from '@electron-agent-bridge/engine';
 
 /** How long one command may take before it fails (a hung page must not hang the agent). */
 const COMMAND_TIMEOUT_MS = 30_000;

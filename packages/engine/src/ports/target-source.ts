@@ -1,4 +1,4 @@
-import type { TargetKind } from '@eab/core';
+import type { TargetKind } from '@electron-agent-bridge/core';
 
 import type { CdpTransport } from './cdp-transport.js';
 

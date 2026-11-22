@@ -1,6 +1,6 @@
 ---
-'@eab/engine': minor
-'@eab/electron': minor
+'@electron-agent-bridge/engine': minor
+'@electron-agent-bridge/electron': minor
 ---
 
 Lighter under floods: log entries are sized without serializing them, URLs with nothing to redact are

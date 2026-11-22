@@ -2,7 +2,7 @@ import { mkdtempSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 
-import { endpointDirectory } from '@eab/core';
+import { endpointDirectory } from '@electron-agent-bridge/core';
 
 /** A private endpoint directory, so a spec only ever sees the apps it launched. */
 export interface IsolatedEndpoint {

@@ -54,8 +54,8 @@ jobs:
       - run: pnpm install --frozen-lockfile
       - name: Find the last release
         id: release
-        # changesets tags each published package as @eab/<package>@<version>.
-        run: echo "tag=$(git describe --tags --abbrev=0 --match '@eab/electron@*' 2>/dev/null || true)" >> "$GITHUB_OUTPUT"
+        # changesets tags each published package as @electron-agent-bridge/<package>@<version>.
+        run: echo "tag=$(git describe --tags --abbrev=0 --match '@electron-agent-bridge/electron@*' 2>/dev/null || true)" >> "$GITHUB_OUTPUT"
       - if: steps.release.outputs.tag == ''
         run: echo "No release tag yet; nothing to check compatibility against."
       - if: steps.release.outputs.tag != ''

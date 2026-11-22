@@ -1,5 +1,11 @@
-import type { TargetKind } from '@eab/core';
-import type { CdpTransport, ChildTarget, Disposable, TargetDescriptor, TargetSource } from '@eab/engine';
+import type { TargetKind } from '@electron-agent-bridge/core';
+import type {
+  CdpTransport,
+  ChildTarget,
+  Disposable,
+  TargetDescriptor,
+  TargetSource,
+} from '@electron-agent-bridge/engine';
 import type { App, WebContents } from 'electron';
 
 import { DebuggerSession } from '../cdp/debugger-session.js';

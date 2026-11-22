@@ -1,6 +1,6 @@
 import { EventEmitter } from 'node:events';
 
-import type { NewLogEntry } from '@eab/engine';
+import type { NewLogEntry } from '@electron-agent-bridge/engine';
 import { describe, expect, it } from 'vitest';
 
 import { IpcRecorder } from './ipc-recorder.js';

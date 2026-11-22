@@ -1,8 +1,8 @@
 import { existsSync } from 'node:fs';
 import { join } from 'node:path';
 
-import { connect, type BridgeClient } from '@eab/client';
-import { handshakeFileName, type Locator } from '@eab/core';
+import { connect, type BridgeClient } from '@electron-agent-bridge/client';
+import { handshakeFileName, type Locator } from '@electron-agent-bridge/core';
 import { afterEach, describe, expect, it } from 'vitest';
 
 import { isolatedEndpoint, type IsolatedEndpoint } from '../harness/endpoint-env.js';

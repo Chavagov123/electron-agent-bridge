@@ -1,4 +1,4 @@
-import type { Locator, WaitCondition } from '@eab/core';
+import type { Locator, WaitCondition } from '@electron-agent-bridge/core';
 
 import {
   actionTarget,

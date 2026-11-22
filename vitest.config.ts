@@ -1,8 +1,8 @@
 import { defineConfig } from 'vitest/config';
 
-// Workspace sources are resolved through the `@eab/source` export condition, so tests never need a build.
+// Workspace sources are resolved through the `@electron-agent-bridge/source` export condition, so tests never need a build.
 // Vite resolves Node-environment tests through its SSR environment, which has its own condition list.
-const conditions = ['@eab/source', 'module', 'node', 'import', 'default'];
+const conditions = ['@electron-agent-bridge/source', 'module', 'node', 'import', 'default'];
 const resolve = { conditions };
 const ssr = { resolve: { conditions } };
 

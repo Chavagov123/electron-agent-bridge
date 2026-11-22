@@ -1,5 +1,5 @@
 // @vitest-environment happy-dom
-import { AGENT_SOURCE, AGENT_VERSION } from '@eab/page-agent';
+import { AGENT_SOURCE, AGENT_VERSION } from '@electron-agent-bridge/page-agent';
 import { beforeEach, describe, expect, it } from 'vitest';
 
 import { ActionEngine } from '../action/action-engine.js';

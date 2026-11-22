@@ -1,6 +1,6 @@
 import { renameSync, rmSync, writeFileSync } from 'node:fs';
 
-import type { Handshake } from '@eab/core';
+import type { Handshake } from '@electron-agent-bridge/core';
 
 /**
  * Writes the discovery file clients read to find the endpoint and token.

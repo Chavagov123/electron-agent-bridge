@@ -1,7 +1,7 @@
 ---
-'@eab/core': minor
-'@eab/engine': minor
-'@eab/electron': minor
+'@electron-agent-bridge/core': minor
+'@electron-agent-bridge/engine': minor
+'@electron-agent-bridge/electron': minor
 ---
 
 Workers, service workers and cross-site iframes: the runtime auto-attaches to their sessions and records

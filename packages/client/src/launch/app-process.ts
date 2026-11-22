@@ -1,7 +1,7 @@
 import { spawn, spawnSync, type ChildProcess } from 'node:child_process';
 import { closeSync, openSync, readFileSync } from 'node:fs';
 
-import { BridgeError } from '@eab/core';
+import { BridgeError } from '@electron-agent-bridge/core';
 
 import { isConsoleProgram } from './windows-subsystem.js';
 

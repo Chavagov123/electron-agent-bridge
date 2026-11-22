@@ -1,4 +1,4 @@
-import { BridgeError, LIMITATION_CODES } from '@eab/core';
+import { BridgeError, LIMITATION_CODES } from '@electron-agent-bridge/core';
 
 import { UNTRUSTED_CLOSE, UNTRUSTED_OPEN } from '../render/text.js';
 import type { SpillSink } from './spill.js';

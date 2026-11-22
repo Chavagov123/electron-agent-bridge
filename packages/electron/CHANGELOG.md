@@ -1,4 +1,4 @@
-# @eab/electron
+# @electron-agent-bridge/electron
 
 ## 1.1.0-rc.0
 
@@ -23,7 +23,7 @@
   agents run with `act`, each with a locator that outlives refs; password values are never recorded.
   `eab record --out flow.yaml` and the MCP `session` actions `recordStart`/`recordStop` turn that into a
   flow. `eab export <flow> --playwright` (or `toPlaywright(flow)`) writes the flow as a Playwright test
-  for Electron. `stringifyFlow` and `flowFromRecording` are new in `@eab/client`.
+  for Electron. `stringifyFlow` and `flowFromRecording` are new in `@electron-agent-bridge/client`.
 - Protocol 1.1.0 groundwork. Action step results report the elements they acted on (`resolved`).
   `session.auth` reports the connection `mode` and the `features` it serves, and MCP hides tools a
   connection cannot serve. `launch({ options })` passes runtime options (IPC value channels, main console,
@@ -94,6 +94,6 @@
 - Updated dependencies [5a0e340]
 - Updated dependencies [1c24fab]
 - Updated dependencies [b85cb50]
-  - @eab/core@1.1.0-rc.0
-  - @eab/page-agent@1.1.0-rc.0
-  - @eab/engine@1.1.0-rc.0
+  - @electron-agent-bridge/core@1.1.0-rc.0
+  - @electron-agent-bridge/page-agent@1.1.0-rc.0
+  - @electron-agent-bridge/engine@1.1.0-rc.0

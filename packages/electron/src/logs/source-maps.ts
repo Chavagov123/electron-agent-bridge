@@ -3,7 +3,7 @@ import { SourceMap, type SourceMapPayload } from 'node:module';
 import { dirname, isAbsolute, resolve } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
-import type { LocationMapper, MappedLocation } from '@eab/engine';
+import type { LocationMapper, MappedLocation } from '@electron-agent-bridge/engine';
 
 /** Maps kept (least recently used evicted), counting files without one. */
 const MAX_FILES = 50;

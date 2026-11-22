@@ -1,4 +1,4 @@
-import { ActionSchema, type MethodData, type Observations } from '@eab/core';
+import { ActionSchema, type MethodData, type Observations } from '@electron-agent-bridge/core';
 import { z } from 'zod';
 
 import { renderLimitations, untrusted } from '../render/text.js';

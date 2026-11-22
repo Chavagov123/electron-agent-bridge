@@ -1,4 +1,4 @@
-import type { Action, Locator, WaitCondition } from '@eab/core';
+import type { Action, Locator, WaitCondition } from '@electron-agent-bridge/core';
 
 import type { Expectation, Flow, FlowStep } from './flow-schema.js';
 import { describeStep } from './flow-runner.js';

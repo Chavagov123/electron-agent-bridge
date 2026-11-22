@@ -1,6 +1,6 @@
 ---
-'@eab/engine': patch
-'@eab/page-agent': patch
+'@electron-agent-bridge/engine': patch
+'@electron-agent-bridge/page-agent': patch
 ---
 
 More fixes found driving a large bundled React app:

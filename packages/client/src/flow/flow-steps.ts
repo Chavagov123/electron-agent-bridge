@@ -1,4 +1,4 @@
-import { BridgeError, ERROR_CODES, type ErrorCode, type WaitCondition } from '@eab/core';
+import { BridgeError, ERROR_CODES, type ErrorCode, type WaitCondition } from '@electron-agent-bridge/core';
 
 import type { BridgeClient } from '../api/bridge-client.js';
 import type { Expectation, FlowStep } from './flow-schema.js';

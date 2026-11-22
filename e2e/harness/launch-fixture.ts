@@ -3,7 +3,7 @@ import { readFileSync } from 'node:fs';
 import { createRequire } from 'node:module';
 import { dirname } from 'node:path';
 
-import { launch, type LaunchStrategy } from '@eab/client';
+import { launch, type LaunchStrategy } from '@electron-agent-bridge/client';
 
 import { electronBinary, type ElectronVersion } from './electron-versions.js';
 import type { BridgeMode } from './modes.js';
@@ -34,8 +34,8 @@ export interface LaunchOptions {
   readonly env?: Readonly<Record<string, string>>;
   readonly readyTimeoutMs?: number;
   /**
-   * `integrated` (default): the fixture imports `@eab/electron/register`. `launch`: the fixture stays
-   * unmodified and `@eab/client` launch() injects the bridge.
+   * `integrated` (default): the fixture imports `@electron-agent-bridge/electron/register`. `launch`: the fixture stays
+   * unmodified and `@electron-agent-bridge/client` launch() injects the bridge.
    */
   readonly mode?: BridgeMode;
   /** Launch mode only: force a strategy, another executable, or allow a packaged build. */
@@ -168,7 +168,7 @@ function readyLine(
 }
 
 /**
- * Launch mode: the unmodified fixture is started by `@eab/client` launch(), which injects the bridge.
+ * Launch mode: the unmodified fixture is started by `@electron-agent-bridge/client` launch(), which injects the bridge.
  * The launcher's own client is closed so specs connect exactly as in Integrated mode.
  */
 async function launchInjected(options: LaunchOptions): Promise<LaunchedFixture> {

@@ -4,7 +4,12 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import { BridgeError, handshakeFileName, type LaunchBridgeOptions, type SessionRole } from '@eab/core';
+import {
+  BridgeError,
+  handshakeFileName,
+  type LaunchBridgeOptions,
+  type SessionRole,
+} from '@electron-agent-bridge/core';
 
 import type { BridgeClient } from '../api/bridge-client.js';
 import { connect } from '../api/connect.js';
@@ -50,7 +55,7 @@ export interface LaunchOptions {
    * strategy. Default 8 s.
    */
   readonly probeMs?: number;
-  /** Path of `@eab/electron/inject` (default: resolved next to this package). */
+  /** Path of `@electron-agent-bridge/electron/inject` (default: resolved next to this package). */
   readonly injectPath?: string;
   /** Read the binary's fuses first and skip strategies they block (default true). */
   readonly checkFuses?: boolean;
@@ -337,14 +342,18 @@ function readStatus(path: string): Status | undefined {
   }
 }
 
-/** `@eab/electron/inject`, resolved from this package (works from the ESM and the CJS build). */
+/** `@electron-agent-bridge/electron/inject`, resolved from this package (works from the ESM and the CJS build). */
 function resolveInject(): string {
   const base = typeof __filename === 'string' ? __filename : fileURLToPath(import.meta.url);
   try {
-    return createRequire(base).resolve('@eab/electron/inject');
+    return createRequire(base).resolve('@electron-agent-bridge/electron/inject');
   } catch {
-    throw new BridgeError('UNSUPPORTED', 'Launch mode needs @eab/electron, which is not installed', {
-      hint: 'Install it next to @eab/client (npm install @eab/electron), or pass injectPath.',
-    });
+    throw new BridgeError(
+      'UNSUPPORTED',
+      'Launch mode needs @electron-agent-bridge/electron, which is not installed',
+      {
+        hint: 'Install it next to @electron-agent-bridge/client (npm install @electron-agent-bridge/electron), or pass injectPath.',
+      },
+    );
   }
 }

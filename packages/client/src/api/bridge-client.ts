@@ -7,11 +7,11 @@ import {
   type MethodData,
   type MethodName,
   type MethodParams,
-} from '@eab/core';
+} from '@electron-agent-bridge/core';
 
 /**
  * What carries a client's calls: the runtime's socket (`connect`), or an engine in this process
- * (`@eab/attach`). Rejects with a `BridgeError`.
+ * (`@electron-agent-bridge/attach`). Rejects with a `BridgeError`.
  */
 export interface RpcCaller {
   readonly closed: boolean;

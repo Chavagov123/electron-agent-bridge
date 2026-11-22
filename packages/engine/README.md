@@ -1,4 +1,4 @@
-# @eab/engine
+# @electron-agent-bridge/engine
 
 Transport-agnostic snapshot, action, wait and observation engine. No Electron, Node or socket imports.
 

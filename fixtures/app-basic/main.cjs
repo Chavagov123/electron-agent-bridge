@@ -4,7 +4,9 @@
 // The compatibility test swaps in an older runtime build (EAB_FIXTURE_RUNTIME: its dist/ directory).
 if (process.env.EAB_FIXTURE_MODE !== 'launch') {
   const runtime = process.env.EAB_FIXTURE_RUNTIME;
-  require(runtime ? require('node:path').join(runtime, 'register.cjs') : '@eab/electron/register');
+  require(
+    runtime ? require('node:path').join(runtime, 'register.cjs') : '@electron-agent-bridge/electron/register',
+  );
 }
 const path = require('node:path');
 const { createFixtureWindow, handleCommands, runFixture } = require('@eab-fixtures/fixture-kit');

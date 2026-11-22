@@ -1,6 +1,6 @@
 import { runInNewContext } from 'node:vm';
 
-import type { RecordedEvent } from '@eab/core';
+import type { RecordedEvent } from '@electron-agent-bridge/core';
 import { describe, expect, it } from 'vitest';
 
 import { parseFlow } from './flow-codec.js';

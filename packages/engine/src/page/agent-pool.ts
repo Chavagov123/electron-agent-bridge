@@ -1,4 +1,4 @@
-import { BridgeError, type DetachReason } from '@eab/core';
+import { BridgeError, type DetachReason } from '@electron-agent-bridge/core';
 
 import type { CdpTransport } from '../ports/cdp-transport.js';
 import type { TargetDescriptor } from '../ports/target-source.js';

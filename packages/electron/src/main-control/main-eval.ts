@@ -1,6 +1,14 @@
 import { runInThisContext } from 'node:vm';
 
-import { BridgeError, CAPS, ok, redact, type Envelope, type MethodData, type MethodInput } from '@eab/core';
+import {
+  BridgeError,
+  CAPS,
+  ok,
+  redact,
+  type Envelope,
+  type MethodData,
+  type MethodInput,
+} from '@electron-agent-bridge/core';
 
 /** Default limit for one evaluation, synchronous part and awaited result together. */
 export const DEFAULT_EVAL_TIMEOUT_MS = 5_000;

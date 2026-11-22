@@ -4,7 +4,7 @@ import { connect } from 'node:net';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 
-import { PROTOCOL_VERSION, ok, socketPath } from '@eab/core';
+import { PROTOCOL_VERSION, ok, socketPath } from '@electron-agent-bridge/core';
 import { afterEach, describe, expect, it } from 'vitest';
 
 import { NO_AUDIT } from '../audit/audit-log.js';

@@ -1,10 +1,10 @@
 ---
-'@eab/core': minor
-'@eab/engine': minor
-'@eab/electron': patch
-'@eab/page-agent': patch
-'@eab/client': patch
-'@eab/attach': patch
+'@electron-agent-bridge/core': minor
+'@electron-agent-bridge/engine': minor
+'@electron-agent-bridge/electron': patch
+'@electron-agent-bridge/page-agent': patch
+'@electron-agent-bridge/client': patch
+'@electron-agent-bridge/attach': patch
 ---
 
 Fixes found driving a large bundled React app:

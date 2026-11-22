@@ -1,4 +1,4 @@
-import { PROTOCOL_VERSION } from '@eab/core';
+import { PROTOCOL_VERSION } from '@electron-agent-bridge/core';
 import { describe, expect, it } from 'vitest';
 
 import { Authenticator } from './authenticator.js';

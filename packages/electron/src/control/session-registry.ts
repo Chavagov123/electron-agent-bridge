@@ -1,6 +1,6 @@
 import { randomBytes } from 'node:crypto';
 
-import type { SessionRole } from '@eab/core';
+import type { SessionRole } from '@electron-agent-bridge/core';
 
 /** A connected, authenticated client. */
 export interface OpenSession {

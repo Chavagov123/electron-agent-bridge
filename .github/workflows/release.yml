@@ -1,6 +1,6 @@
 name: release
 
-# Publishes the @eab/* packages with npm provenance. Manual only; `dry-run` (the default) packs and
+# Publishes the @electron-agent-bridge/* packages with npm provenance. Manual only; `dry-run` (the default) packs and
 # checks everything without publishing. Versions come from changesets (`pnpm version-packages`).
 on:
   workflow_dispatch:
@@ -37,6 +37,6 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           NPM_CONFIG_PROVENANCE: 'true'
-      # changesets publish creates @eab/<package>@<version> tags locally; push them.
+      # changesets publish creates @electron-agent-bridge/<package>@<version> tags locally; push them.
       - if: ${{ !inputs.dry-run }}
         run: git push origin --tags

@@ -1,4 +1,8 @@
-import { LAUNCH_OPTIONS_ENV, LaunchBridgeOptionsSchema, type LaunchBridgeOptions } from '@eab/core';
+import {
+  LAUNCH_OPTIONS_ENV,
+  LaunchBridgeOptionsSchema,
+  type LaunchBridgeOptions,
+} from '@electron-agent-bridge/core';
 
 /** How the bridge gets into the app's main process. */
 export type LaunchStrategy = 'node-options' | 'inspector';
@@ -9,7 +13,7 @@ export interface LaunchEnvironmentInput {
   /** Caller-supplied variables; win over the parent's. */
   readonly extra?: Readonly<Record<string, string>>;
   readonly strategy: LaunchStrategy;
-  /** Absolute path of `@eab/electron/inject`. */
+  /** Absolute path of `@electron-agent-bridge/electron/inject`. */
   readonly injectPath: string;
   /** File the inject reports its progress to. */
   readonly statusPath: string;

@@ -1,4 +1,4 @@
-import type { Locator } from '@eab/core';
+import type { Locator } from '@electron-agent-bridge/core';
 
 import { MAX_NAME } from './accname.js';
 import { clip } from './dom.js';

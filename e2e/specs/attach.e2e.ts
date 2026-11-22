@@ -1,7 +1,7 @@
 import { createServer } from 'node:net';
 
-import { attach } from '@eab/attach';
-import type { BridgeClient } from '@eab/client';
+import { attach } from '@electron-agent-bridge/attach';
+import type { BridgeClient } from '@electron-agent-bridge/client';
 import { afterEach, describe, expect, it } from 'vitest';
 
 import { selectedVersions } from '../harness/electron-versions.js';

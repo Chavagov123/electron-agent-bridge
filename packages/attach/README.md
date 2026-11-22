@@ -1,4 +1,4 @@
-# @eab/attach
+# @electron-agent-bridge/attach
 
 Attach mode: drive the renderers of a running Electron app over its remote debugging port, without
 the in-app runtime (no IPC, main-process logs or main control). See [docs/modes.md](../../docs/modes.md).

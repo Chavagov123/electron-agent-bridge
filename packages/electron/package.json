@@ -1,5 +1,5 @@
 {
-  "name": "@eab/electron",
+  "name": "@electron-agent-bridge/electron",
   "version": "1.1.0-rc.0",
   "description": "In-app runtime for the Electron main process, preload and renderer. Off unless explicitly enabled.",
   "license": "MIT",
@@ -30,7 +30,7 @@
   "module": "./dist/index.js",
   "exports": {
     ".": {
-      "@eab/source": "./src/index.ts",
+      "@electron-agent-bridge/source": "./src/index.ts",
       "import": {
         "types": "./dist/index.d.ts",
         "default": "./dist/index.js"
@@ -41,7 +41,7 @@
       }
     },
     "./register": {
-      "@eab/source": "./src/register.ts",
+      "@electron-agent-bridge/source": "./src/register.ts",
       "import": {
         "types": "./dist/register.d.ts",
         "default": "./dist/register.js"
@@ -52,7 +52,7 @@
       }
     },
     "./renderer": {
-      "@eab/source": "./src/renderer.ts",
+      "@electron-agent-bridge/source": "./src/renderer.ts",
       "import": {
         "types": "./dist/renderer.d.ts",
         "default": "./dist/renderer.js"
@@ -78,9 +78,9 @@
     "check:package": "publint --strict && attw --pack . --profile node16"
   },
   "dependencies": {
-    "@eab/core": "workspace:*",
-    "@eab/engine": "workspace:*",
-    "@eab/page-agent": "workspace:*"
+    "@electron-agent-bridge/core": "workspace:*",
+    "@electron-agent-bridge/engine": "workspace:*",
+    "@electron-agent-bridge/page-agent": "workspace:*"
   },
   "peerDependencies": {
     "electron": ">=35.0.0"

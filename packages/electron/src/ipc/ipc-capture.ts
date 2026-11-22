@@ -1,7 +1,7 @@
 import { existsSync, readFileSync, renameSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 
-import type { NewLogEntry } from '@eab/engine';
+import type { NewLogEntry } from '@electron-agent-bridge/engine';
 import type { App, Session, WebContents } from 'electron';
 
 import { PRELOAD_SOURCE, PRELOAD_VERSION } from '../generated/preload-source.js';

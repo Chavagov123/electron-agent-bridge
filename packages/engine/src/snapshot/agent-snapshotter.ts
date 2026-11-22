@@ -5,8 +5,8 @@ import {
   type Locator,
   type MethodData,
   type MethodInput,
-} from '@eab/core';
-import type { SnapshotResponse } from '@eab/page-agent';
+} from '@electron-agent-bridge/core';
+import type { SnapshotResponse } from '@electron-agent-bridge/page-agent';
 
 import type { AgentPool } from '../page/agent-pool.js';
 import type { TargetDescriptor } from '../ports/target-source.js';

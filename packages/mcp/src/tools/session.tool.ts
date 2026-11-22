@@ -1,7 +1,12 @@
 import { writeFileSync } from 'node:fs';
 
-import { flowFromRecording, stringifyFlow, type AppInstance, type BridgeClient } from '@eab/client';
-import { BridgeError, type RecordedEvent } from '@eab/core';
+import {
+  flowFromRecording,
+  stringifyFlow,
+  type AppInstance,
+  type BridgeClient,
+} from '@electron-agent-bridge/client';
+import { BridgeError, type RecordedEvent } from '@electron-agent-bridge/core';
 import { z } from 'zod';
 
 import { untrusted } from '../render/text.js';

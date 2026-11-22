@@ -1,7 +1,7 @@
 import { readFileSync, readdirSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 
-import { BridgeError } from '@eab/core';
+import { BridgeError } from '@electron-agent-bridge/core';
 
 import type { BridgeClient } from '../api/bridge-client.js';
 import type { ConnectOptions } from '../api/connect.js';

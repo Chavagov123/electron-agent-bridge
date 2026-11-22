@@ -3,10 +3,10 @@
 ## Packages and dependencies
 
 ```
-@eab/mcp ──► @eab/client ──► @eab/core ◄── @eab/engine ◄── @eab/electron
+@electron-agent-bridge/mcp ──► @electron-agent-bridge/client ──► @electron-agent-bridge/core ◄── @electron-agent-bridge/engine ◄── @electron-agent-bridge/electron
    (MCP server, eab CLI)  (Node API, flows)   (protocol)    (CDP engine)    (in-app runtime)
                                                                 │
-                                                     @eab/page-agent (in-page scripts, built to strings)
+                                                     @electron-agent-bridge/page-agent (in-page scripts, built to strings)
 ```
 
 - **core**: the protocol table (every method's params, result and capability, as zod schemas), error
@@ -28,7 +28,7 @@ the runtime cannot import client code, MCP talks to apps only through the client
 
 ## Data flow
 
-1. **Install.** `import '@eab/electron/register'` (Integrated) or the inject (Launch mode, via
+1. **Install.** `import '@electron-agent-bridge/electron/register'` (Integrated) or the inject (Launch mode, via
    `NODE_OPTIONS --require` or the inspector) runs first in the main process. The gate decides:
    `EAB_ENABLE=1` and (unpackaged or opted in). Off means nothing is hooked, opened or written.
 2. **Hooks.** Synchronously, before the app's own code: IPC wrappers (`ipcMain`, `webContents.ipc`,

@@ -1,5 +1,5 @@
-import { BridgeError, type ErrorCode, type Locator } from '@eab/core';
-import type { ActionTarget, Requirements } from '@eab/page-agent';
+import { BridgeError, type ErrorCode, type Locator } from '@electron-agent-bridge/core';
+import type { ActionTarget, Requirements } from '@electron-agent-bridge/page-agent';
 
 import { detachedError } from '../page/agent-pool.js';
 import type { PageAgentClient } from '../page/page-agent-client.js';

@@ -8,8 +8,8 @@ only the app's renderers, from outside.
 Add one line as the **first** import of the main process and start the app with `EAB_ENABLE=1`:
 
 ```js
-import '@eab/electron/register'; // ESM
-// or: require('@eab/electron/register'); // CommonJS
+import '@electron-agent-bridge/electron/register'; // ESM
+// or: require('@electron-agent-bridge/electron/register'); // CommonJS
 ```
 
 - Off unless `EAB_ENABLE=1`; never in a packaged build unless the app calls
@@ -26,12 +26,12 @@ eab launch /path/to/electron -- /path/to/app      # development build
 eab launch "/Applications/My App.app/Contents/MacOS/My App" --allow-packaged
 ```
 
-or from code: `launch({ executable, args, allowPackaged })` in `@eab/client`, or the MCP
+or from code: `launch({ executable, args, allowPackaged })` in `@electron-agent-bridge/client`, or the MCP
 `session` tool with `action: "launch"` (the app is closed with the session).
 
 Strategies, tried in order (`--strategy` picks one):
 
-1. **node-options**: `NODE_OPTIONS=--require <@eab/electron/inject>`. Needs the
+1. **node-options**: `NODE_OPTIONS=--require <@electron-agent-bridge/electron/inject>`. Needs the
    `EnableNodeOptionsEnvironmentVariable` fuse (on by default).
 2. **inspector**: `--inspect-brk=0`, the bridge is injected before the app's first script and the
    inspector is closed again. Needs the `EnableNodeCliInspectArguments` fuse. Packaged apps with a
@@ -56,7 +56,7 @@ my-app --remote-debugging-port=9222
 ```
 
 ```js
-import { attach } from '@eab/attach';
+import { attach } from '@electron-agent-bridge/attach';
 const client = await attach({ port: 9222 });
 ```
 

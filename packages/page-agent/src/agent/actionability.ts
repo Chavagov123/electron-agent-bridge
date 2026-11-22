@@ -1,4 +1,4 @@
-import type { Locator } from '@eab/core';
+import type { Locator } from '@electron-agent-bridge/core';
 
 import { accessibleName } from './accname.js';
 import { AgentFailure } from './failure.js';

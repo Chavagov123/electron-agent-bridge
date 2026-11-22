@@ -78,7 +78,7 @@ errors since the flow started) in `<artifacts>/<flow-name>/`. Invalid files are 
 file, line and step path: `order.yaml:7: steps[2].act.locator: …`.
 
 From code: `parseFlow(text)`, `runFlow(flow, { client })`, `runFlowFiles(files, { api })` and
-`toJunit(results)` from `@eab/client`.
+`toJunit(results)` from `@electron-agent-bridge/client`.
 
 ## Recording flows (1.1)
 
@@ -97,7 +97,7 @@ and is not recorded twice. Password fields are never recorded: the flow reads th
 
 Agents record with the `session` tool: `action: recordStart`, then `action: recordStop` (optionally
 with `out` and `name`) returns the flow. Programmatically: `record.start`, `record.events` and
-`record.stop`, then `flowFromRecording(events, { name })` and `stringifyFlow(flow)` from `@eab/client`.
+`record.stop`, then `flowFromRecording(events, { name })` and `stringifyFlow(flow)` from `@electron-agent-bridge/client`.
 Recording is allowed for observers too. Not recorded: drag and drop, file choosers, typing into
 contenteditable editors, and anything outside the app's pages (menus, native dialogs).
 

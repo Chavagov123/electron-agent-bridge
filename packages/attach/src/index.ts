@@ -1,5 +1,5 @@
 /**
- * @eab/attach: Attach mode — drive the renderers of a running Electron app over its remote debugging
+ * @electron-agent-bridge/attach: Attach mode — drive the renderers of a running Electron app over its remote debugging
  * port, with the engine in this process and no runtime inside the app.
  * @packageDocumentation
  */

@@ -7,7 +7,7 @@ import {
   type Handshake,
   type MethodParams,
   type SessionRole,
-} from '@eab/core';
+} from '@electron-agent-bridge/core';
 
 import { listInstances, readHandshake } from '../control/discovery.js';
 import { RpcConnection } from '../control/rpc-connection.js';
@@ -43,7 +43,7 @@ export async function connect(options: ConnectOptions = {}): Promise<BridgeClien
     const params: MethodParams<'session.auth'> = {
       token: handshake.token,
       protocolVersion: PROTOCOL_VERSION,
-      client: options.client ?? { name: '@eab/client', version: PROTOCOL_VERSION },
+      client: options.client ?? { name: '@electron-agent-bridge/client', version: PROTOCOL_VERSION },
       ...(options.capabilities ? { capabilities: [...options.capabilities] } : {}),
       ...(options.role ? { role: options.role } : {}),
     };

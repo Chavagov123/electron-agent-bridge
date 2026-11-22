@@ -1,10 +1,10 @@
 'use strict';
 // First: the bridge (off unless EAB_ENABLE=1). In Launch-mode tests the launcher injects it instead.
-if (process.env.EAB_FIXTURE_MODE !== 'launch') require('@eab/electron').enableAgentBridge();
+if (process.env.EAB_FIXTURE_MODE !== 'launch') require('@electron-agent-bridge/electron').enableAgentBridge();
 const http = require('node:http');
 const path = require('node:path');
 const { BrowserWindow, dialog, net } = require('electron');
-const { addLogSource, loggerSource } = require('@eab/electron');
+const { addLogSource, loggerSource } = require('@electron-agent-bridge/electron');
 const { createFixtureWindow, handleCommands, runFixture } = require('@eab-fixtures/fixture-kit');
 
 // What the app observed, compared with the bridge off and on (transparency).

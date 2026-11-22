@@ -1,4 +1,4 @@
-// Bundle the fixture's renderer (real store libraries + @eab/electron/renderer) into dist/renderer.js.
+// Bundle the fixture's renderer (real store libraries + @electron-agent-bridge/electron/renderer) into dist/renderer.js.
 // Run by `pnpm gen`; dist/ is git-ignored.
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -14,7 +14,7 @@ await build({
   platform: 'browser',
   target: 'chrome120',
   // Sources of workspace packages: dist/ may not be built yet.
-  conditions: ['@eab/source'],
+  conditions: ['@electron-agent-bridge/source'],
   define: { 'process.env.NODE_ENV': '"development"' },
   logLevel: 'warning',
 });

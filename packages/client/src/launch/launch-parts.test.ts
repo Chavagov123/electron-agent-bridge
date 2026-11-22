@@ -139,7 +139,7 @@ describe('diagnose', () => {
       'inspector: --inspect-brk was ignored (the EnableNodeCliInspectArguments fuse',
     );
     expect(error.message).toContain('App output (last lines):\nWarning: something');
-    expect(error.hint).toContain("import '@eab/electron/register'");
+    expect(error.hint).toContain("import '@electron-agent-bridge/electron/register'");
   });
 
   it('reports a gate refusal as NOT_ENABLED with the allowPackaged hint', () => {

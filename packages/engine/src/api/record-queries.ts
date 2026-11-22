@@ -8,7 +8,7 @@ import {
   type Limitation,
   type MethodData,
   type MethodInput,
-} from '@eab/core';
+} from '@electron-agent-bridge/core';
 
 import { CONSOLE_RATE_PER_SECOND, type ConsoleCollector } from '../observe/console-collector.js';
 import type { LogBook } from '../observe/log-book.js';

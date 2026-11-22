@@ -8,7 +8,12 @@ const requireFromHere = createRequire(import.meta.url);
 
 /** The built `eab-mcp` executable (run `pnpm build` first; `pnpm test:e2e` does). */
 export function mcpBinPath(): string {
-  return join(dirname(requireFromHere.resolve('@eab/mcp/package.json')), 'dist', 'bin', 'eab-mcp.js');
+  return join(
+    dirname(requireFromHere.resolve('@electron-agent-bridge/mcp/package.json')),
+    'dist',
+    'bin',
+    'eab-mcp.js',
+  );
 }
 
 /** The built `eab` CLI. */

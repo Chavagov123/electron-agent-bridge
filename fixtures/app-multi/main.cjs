@@ -1,10 +1,10 @@
 'use strict';
 // First import: the bridge must hook in before the app creates windows (off unless EAB_ENABLE=1).
 // In Launch-mode tests the app stays unmodified: the launcher injects the bridge instead.
-if (process.env.EAB_FIXTURE_MODE !== 'launch') require('@eab/electron/register');
+if (process.env.EAB_FIXTURE_MODE !== 'launch') require('@electron-agent-bridge/electron/register');
 const path = require('node:path');
 const { app, BrowserWindow, WebContentsView } = require('electron');
-const { nameTarget } = require('@eab/electron');
+const { nameTarget } = require('@electron-agent-bridge/electron');
 const {
   announceReady,
   createFixtureWindow,

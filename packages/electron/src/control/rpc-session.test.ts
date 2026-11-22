@@ -1,4 +1,4 @@
-import { PROTOCOL_VERSION, ok, type Capability, type RpcResponse } from '@eab/core';
+import { PROTOCOL_VERSION, ok, type Capability, type RpcResponse } from '@electron-agent-bridge/core';
 import { describe, expect, it } from 'vitest';
 
 import type { AuditEntry, AuditSink } from '../audit/audit-log.js';

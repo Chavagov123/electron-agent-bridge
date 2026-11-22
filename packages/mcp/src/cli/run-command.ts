@@ -1,7 +1,13 @@
 import { existsSync } from 'node:fs';
 
-import { findFlowFiles, runFlowFiles, toJunit, type FlowResult, type StepOutcome } from '@eab/client';
-import { BridgeError } from '@eab/core';
+import {
+  findFlowFiles,
+  runFlowFiles,
+  toJunit,
+  type FlowResult,
+  type StepOutcome,
+} from '@electron-agent-bridge/client';
+import { BridgeError } from '@electron-agent-bridge/core';
 
 import { renderError } from '../render/text.js';
 import type { ClientApi } from '../session/session-manager.js';

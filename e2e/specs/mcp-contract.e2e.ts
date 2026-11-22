@@ -4,7 +4,7 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { promisify } from 'node:util';
 
-import { handshakeFileName } from '@eab/core';
+import { handshakeFileName } from '@electron-agent-bridge/core';
 import { afterEach, describe, expect, it } from 'vitest';
 
 import { selectedVersions } from '../harness/electron-versions.js';

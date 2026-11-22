@@ -1,6 +1,6 @@
 import { basename } from 'node:path';
 
-import type { NewLogEntry } from '@eab/engine';
+import type { NewLogEntry } from '@electron-agent-bridge/engine';
 
 import { safely } from './ipc-main-wrapper.js';
 import type { IpcRecorder } from './ipc-recorder.js';

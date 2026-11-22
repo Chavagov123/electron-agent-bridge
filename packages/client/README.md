@@ -1,4 +1,4 @@
-# @eab/client
+# @electron-agent-bridge/client
 
 Programmatic Node API: connect to or launch an app, typed BridgeApi, flow runner.
 

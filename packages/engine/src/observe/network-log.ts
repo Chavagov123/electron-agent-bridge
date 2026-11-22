@@ -1,4 +1,4 @@
-import { ByteRing, CAPS, globMatcher, type NetworkRecord } from '@eab/core';
+import { ByteRing, CAPS, globMatcher, type NetworkRecord } from '@electron-agent-bridge/core';
 import { z } from 'zod';
 
 import type { CdpEvent, CdpTransport, Disposable } from '../ports/cdp-transport.js';

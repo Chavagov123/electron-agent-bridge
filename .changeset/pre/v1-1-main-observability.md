@@ -1,8 +1,8 @@
 ---
-'@eab/core': minor
-'@eab/engine': minor
-'@eab/electron': minor
-'@eab/mcp': minor
+'@electron-agent-bridge/core': minor
+'@electron-agent-bridge/engine': minor
+'@electron-agent-bridge/electron': minor
+'@electron-agent-bridge/mcp': minor
 ---
 
 Main-process observability. IPC capture also records `utilityProcess` messages (`utility:<name>`),

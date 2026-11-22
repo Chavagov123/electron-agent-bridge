@@ -1,9 +1,9 @@
 ---
-'@eab/core': minor
-'@eab/engine': minor
-'@eab/electron': minor
-'@eab/client': minor
-'@eab/mcp': minor
+'@electron-agent-bridge/core': minor
+'@electron-agent-bridge/engine': minor
+'@electron-agent-bridge/electron': minor
+'@electron-agent-bridge/client': minor
+'@electron-agent-bridge/mcp': minor
 ---
 
 Protocol 1.1.0 groundwork. Action step results report the elements they acted on (`resolved`).

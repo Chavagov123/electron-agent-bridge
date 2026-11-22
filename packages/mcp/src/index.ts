@@ -1,5 +1,5 @@
 /**
- * @eab/mcp: MCP server (eab-mcp) and CLI (eab) on top of @eab/client.
+ * @electron-agent-bridge/mcp: MCP server (eab-mcp) and CLI (eab) on top of @electron-agent-bridge/client.
  * @packageDocumentation
  */
 export { SERVER_VERSION, TOOLS, createBridgeMcpServer, type BridgeMcpServer } from './server.js';

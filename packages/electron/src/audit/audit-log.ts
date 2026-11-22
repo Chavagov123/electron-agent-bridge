@@ -1,6 +1,6 @@
 import { closeSync, constants, fstatSync, openSync, renameSync, writeSync } from 'node:fs';
 
-import type { ErrorCode } from '@eab/core';
+import type { ErrorCode } from '@electron-agent-bridge/core';
 
 /**
  * One audited call. Deliberately metadata only: never params, values, tokens or page content, so

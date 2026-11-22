@@ -1,7 +1,7 @@
 import { createRequire } from 'node:module';
 import { resolve } from 'node:path';
 
-import { ok } from '@eab/core';
+import { ok } from '@electron-agent-bridge/core';
 import type { App } from 'electron';
 
 import type { MethodHandlers } from '../control/rpc-session.js';

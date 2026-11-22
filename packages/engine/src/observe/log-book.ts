@@ -1,4 +1,4 @@
-import { ByteRing, CAPS, type LogEntry } from '@eab/core';
+import { ByteRing, CAPS, type LogEntry } from '@electron-agent-bridge/core';
 
 import { safeUrl } from './url-privacy.js';
 

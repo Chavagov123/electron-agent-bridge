@@ -1,4 +1,10 @@
-import { ConsoleCollector, LogBook, NetworkLog, type Clock, type RecordQueryDeps } from '@eab/engine';
+import {
+  ConsoleCollector,
+  LogBook,
+  NetworkLog,
+  type Clock,
+  type RecordQueryDeps,
+} from '@electron-agent-bridge/engine';
 import type { App, WebContents } from 'electron';
 
 import { MainLogCapture } from '../logs/main-logs.js';

@@ -3,7 +3,7 @@
 // register themselves. FIXTURE_EVAL=1 raises the ceiling to `eval`. In Launch-mode tests the launcher
 // injects the bridge instead (no shim; `eval` through allowEval).
 if (process.env.EAB_FIXTURE_MODE !== 'launch') {
-  require('@eab/electron').enableAgentBridge({
+  require('@electron-agent-bridge/electron').enableAgentBridge({
     state: { devtoolsShim: true },
     ...(process.env.FIXTURE_EVAL === '1' ? { capabilities: ['observe', 'interact', 'eval'] } : {}),
   });

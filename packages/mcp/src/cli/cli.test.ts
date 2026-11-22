@@ -2,7 +2,7 @@ import { mkdtempSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 
-import { LocatorSchema } from '@eab/core';
+import { LocatorSchema } from '@electron-agent-bridge/core';
 import { describe, expect, it } from 'vitest';
 import { z } from 'zod';
 

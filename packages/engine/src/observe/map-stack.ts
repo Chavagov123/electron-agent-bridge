@@ -1,4 +1,4 @@
-import type { LogEntry } from '@eab/core';
+import type { LogEntry } from '@electron-agent-bridge/core';
 
 import type { LocationMapper, MappedLocation, ScriptLocation, StackMapper } from '../ports/stack-mapper.js';
 import { isOwnCode } from './console-format.js';

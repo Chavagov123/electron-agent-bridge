@@ -1,4 +1,4 @@
-import { BridgeError } from '@eab/core';
+import { BridgeError } from '@electron-agent-bridge/core';
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 
 import { runCli, type CliIo } from './cli/run-cli.js';

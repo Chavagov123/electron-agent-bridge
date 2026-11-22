@@ -1,7 +1,7 @@
 import { chmodSync, lstatSync, mkdirSync, readdirSync, rmSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 
-import { BridgeError } from '@eab/core';
+import { BridgeError } from '@electron-agent-bridge/core';
 
 /**
  * Create (or verify) the per-user endpoint directory. On POSIX it must be a real directory owned by

@@ -4,7 +4,7 @@
     "lib": ["ES2023"],
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
-    "customConditions": ["@eab/source"],
+    "customConditions": ["@electron-agent-bridge/source"],
     "strict": true,
     "exactOptionalPropertyTypes": true,
     "noUncheckedIndexedAccess": true,

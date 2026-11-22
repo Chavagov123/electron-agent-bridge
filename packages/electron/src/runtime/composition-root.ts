@@ -1,7 +1,7 @@
 import { randomBytes } from 'node:crypto';
 import { dirname, join } from 'node:path';
 
-import { ok, handshakeFileName, socketPath } from '@eab/core';
+import { ok, handshakeFileName, socketPath } from '@electron-agent-bridge/core';
 import {
   ActionEngine,
   AgentPool,
@@ -20,8 +20,8 @@ import {
   queryRecorded,
   type Clock,
   type RecordQueryDeps,
-} from '@eab/engine';
-import { AGENT_SOURCE, AGENT_VERSION, stateHookSource } from '@eab/page-agent';
+} from '@electron-agent-bridge/engine';
+import { AGENT_SOURCE, AGENT_VERSION, stateHookSource } from '@electron-agent-bridge/page-agent';
 import type { App, Session, WebContents } from 'electron';
 
 import { NO_AUDIT, type AuditSink } from '../audit/audit-log.js';

@@ -1,4 +1,4 @@
-import { BridgeError } from '@eab/core';
+import { BridgeError } from '@electron-agent-bridge/core';
 
 /** A key as CDP `Input.dispatchKeyEvent` wants it. */
 export interface KeyDefinition {

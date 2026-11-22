@@ -1,4 +1,4 @@
-import type { BridgeClient, ConnectOptions } from '@eab/client';
+import type { BridgeClient, ConnectOptions } from '@electron-agent-bridge/client';
 import { describe, expect, it } from 'vitest';
 
 import { SessionManager, type ClientApi } from './session-manager.js';

@@ -1,5 +1,5 @@
-import type { Observations } from '@eab/core';
-import type { LiveState } from '@eab/page-agent';
+import type { Observations } from '@electron-agent-bridge/core';
+import type { LiveState } from '@electron-agent-bridge/page-agent';
 import { z } from 'zod';
 
 import type { PageAgentClient } from '../page/page-agent-client.js';

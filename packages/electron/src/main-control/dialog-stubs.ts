@@ -1,4 +1,4 @@
-import { CAPS, ok, type Envelope, type MethodData, type MethodInput } from '@eab/core';
+import { CAPS, ok, type Envelope, type MethodData, type MethodInput } from '@electron-agent-bridge/core';
 
 type StubbedMethod = MethodInput<'dialog.stub'>['method'];
 type Response = Record<string, unknown>;

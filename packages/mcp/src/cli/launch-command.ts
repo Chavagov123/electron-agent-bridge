@@ -1,5 +1,5 @@
-import { BridgeError } from '@eab/core';
-import type { LaunchOptions } from '@eab/client';
+import { BridgeError } from '@electron-agent-bridge/core';
+import type { LaunchOptions } from '@electron-agent-bridge/client';
 
 import { renderError } from '../render/text.js';
 import type { ClientApi } from '../session/session-manager.js';

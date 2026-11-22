@@ -24,12 +24,12 @@ Electron 35+ on Windows, macOS and Linux.
 **Integrated** (the app imports the bridge, which does nothing unless enabled):
 
 ```sh
-npm install --save-dev @eab/electron@rc @eab/mcp@rc
+npm install --save-dev @electron-agent-bridge/electron@rc @electron-agent-bridge/mcp@rc
 ```
 
 ```js
 // First line of the app's main entry.
-import '@eab/electron/register';
+import '@electron-agent-bridge/electron/register';
 ```
 
 ```sh
@@ -45,7 +45,7 @@ npx eab launch ./node_modules/.bin/electron -- .
 ```
 
 **For agents:** add the MCP server to your MCP host, e.g.
-`claude mcp add eab -- npx -y -p @eab/mcp@rc eab-mcp` (or `npx eab-mcp` where `@eab/mcp` is installed). The
+`claude mcp add eab -- npx -y -p @electron-agent-bridge/mcp@rc eab-mcp` (or `npx eab-mcp` where `@electron-agent-bridge/mcp` is installed). The
 agent then has 14 tools: `session`, `targets`, `snapshot`, `find`, `act`, `wait_for`, `screenshot`,
 `logs`, `network`, `ipc`, `state`, `app`, and, where the app grants `eval`, `dialogs` and `eval`.
 
@@ -69,7 +69,7 @@ npx eab run flows/ --junit report.xml --artifacts artifacts
 **From code:**
 
 ```ts
-import { connect } from '@eab/client';
+import { connect } from '@electron-agent-bridge/client';
 
 const app = await connect();
 const { data } = await app.call('snapshot.take', {});
@@ -95,10 +95,10 @@ await app.call('action.run', { actions: [{ type: 'click', locator: { role: 'butt
 
 | Package | |
 |---|---|
-| `@eab/electron` | in-app runtime (main process); `/register`, `/renderer` (`registerState`), `/inject` (Launch mode) |
-| `@eab/mcp` | `eab-mcp` (MCP server over stdio) and the `eab` CLI |
-| `@eab/client` | Node API: `connect`, `launch`, flows |
-| `@eab/core`, `@eab/engine`, `@eab/page-agent` | protocol, engine and in-page agent (used by the others) |
+| `@electron-agent-bridge/electron` | in-app runtime (main process); `/register`, `/renderer` (`registerState`), `/inject` (Launch mode) |
+| `@electron-agent-bridge/mcp` | `eab-mcp` (MCP server over stdio) and the `eab` CLI |
+| `@electron-agent-bridge/client` | Node API: `connect`, `launch`, flows |
+| `@electron-agent-bridge/core`, `@electron-agent-bridge/engine`, `@electron-agent-bridge/page-agent` | protocol, engine and in-page agent (used by the others) |
 
 ## Development
 

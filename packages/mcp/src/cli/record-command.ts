@@ -1,8 +1,14 @@
 import { readFileSync } from 'node:fs';
 import { basename } from 'node:path';
 
-import { flowFromRecording, parseFlow, stringifyFlow, toPlaywright, type BridgeClient } from '@eab/client';
-import { BridgeError, type RecordedEvent } from '@eab/core';
+import {
+  flowFromRecording,
+  parseFlow,
+  stringifyFlow,
+  toPlaywright,
+  type BridgeClient,
+} from '@electron-agent-bridge/client';
+import { BridgeError, type RecordedEvent } from '@electron-agent-bridge/core';
 
 import { renderError } from '../render/text.js';
 import type { ClientApi } from '../session/session-manager.js';

@@ -1,6 +1,6 @@
 // The app's own main entry, as written in an electron-vite / webpack project: the bridge is its
 // first import, then the app. The e2e spec bundles this file.
-import '@eab/electron/register';
+import '@electron-agent-bridge/electron/register';
 
 import path from 'node:path';
 

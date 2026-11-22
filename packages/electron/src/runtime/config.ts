@@ -1,4 +1,4 @@
-import { BridgeError, type Capability } from '@eab/core';
+import { BridgeError, type Capability } from '@electron-agent-bridge/core';
 
 import type { LogSource } from '../logs/log-sources.js';
 
@@ -31,7 +31,7 @@ export interface BridgeOptions {
   /**
    * State. `devtoolsShim: true` defines the Redux DevTools extension globals in app pages (when no real
    * extension is there), so stores built with devtools support register themselves. Default off:
-   * `registerState` from `@eab/electron/renderer` needs no shim.
+   * `registerState` from `@electron-agent-bridge/electron/renderer` needs no shim.
    */
   readonly state?: { readonly devtoolsShim?: boolean };
   /**

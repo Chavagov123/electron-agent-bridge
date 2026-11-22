@@ -1,4 +1,4 @@
-import { LogEntrySchema, type LogEntry } from '@eab/core';
+import { LogEntrySchema, type LogEntry } from '@electron-agent-bridge/core';
 import { z } from 'zod';
 
 import { renderLimitations, untrusted } from '../render/text.js';

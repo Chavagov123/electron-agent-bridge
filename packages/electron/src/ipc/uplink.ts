@@ -1,4 +1,4 @@
-import type { IpcEvent } from '@eab/core';
+import type { IpcEvent } from '@electron-agent-bridge/core';
 
 import type { CorrelationQueue } from './correlation.js';
 import { keyOf, safely, senderOf } from './ipc-main-wrapper.js';

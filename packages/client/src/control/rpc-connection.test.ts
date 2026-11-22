@@ -4,7 +4,7 @@ import { createServer, type Server, type Socket } from 'node:net';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 
-import { BridgeError, socketPath } from '@eab/core';
+import { BridgeError, socketPath } from '@electron-agent-bridge/core';
 import { afterEach, describe, expect, it } from 'vitest';
 
 import { RpcConnection } from './rpc-connection.js';

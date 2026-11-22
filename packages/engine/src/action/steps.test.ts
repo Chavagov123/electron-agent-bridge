@@ -1,4 +1,4 @@
-import type { Action } from '@eab/core';
+import type { Action } from '@electron-agent-bridge/core';
 import { describe, expect, it } from 'vitest';
 
 import { AgentPool } from '../page/agent-pool.js';

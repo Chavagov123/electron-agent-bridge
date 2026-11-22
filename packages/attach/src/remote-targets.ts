@@ -1,5 +1,5 @@
-import type { TargetKind } from '@eab/core';
-import type { CdpTransport, Disposable, TargetDescriptor, TargetSource } from '@eab/engine';
+import type { TargetKind } from '@electron-agent-bridge/core';
+import type { CdpTransport, Disposable, TargetDescriptor, TargetSource } from '@electron-agent-bridge/engine';
 import { z } from 'zod';
 
 import { WebSocketCdpTransport, type SocketFactory } from './websocket-transport.js';

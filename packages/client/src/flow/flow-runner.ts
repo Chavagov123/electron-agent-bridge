@@ -1,7 +1,7 @@
 import { copyFileSync, mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 
-import { BridgeError } from '@eab/core';
+import { BridgeError } from '@electron-agent-bridge/core';
 
 import type { BridgeClient } from '../api/bridge-client.js';
 import type { Flow, FlowStep } from './flow-schema.js';

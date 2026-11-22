@@ -1,10 +1,10 @@
-# @eab/attach
+# @electron-agent-bridge/attach
 
 ## 1.1.0-rc.0
 
 ### Minor Changes
 
-- Attach mode: new package `@eab/attach`. `attach({ port })` drives the renderers of a running app over
+- Attach mode: new package `@electron-agent-bridge/attach`. `attach({ port })` drives the renderers of a running app over
   its `--remote-debugging-port`, with the engine in the calling process and no runtime inside the app;
   main-process methods answer `UNSUPPORTED`. MCP: `session action=attach port=…` (needs
   `eab-mcp --allow-eval`). `BridgeClient` now takes any `RpcCaller`.
@@ -36,7 +36,7 @@
 - Updated dependencies [5a0e340]
 - Updated dependencies [1c24fab]
 - Updated dependencies [b85cb50]
-  - @eab/core@1.1.0-rc.0
-  - @eab/page-agent@1.1.0-rc.0
-  - @eab/engine@1.1.0-rc.0
-  - @eab/client@1.1.0-rc.0
+  - @electron-agent-bridge/core@1.1.0-rc.0
+  - @electron-agent-bridge/page-agent@1.1.0-rc.0
+  - @electron-agent-bridge/engine@1.1.0-rc.0
+  - @electron-agent-bridge/client@1.1.0-rc.0

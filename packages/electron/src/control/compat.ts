@@ -1,4 +1,4 @@
-import { parseVersion, type Envelope } from '@eab/core';
+import { parseVersion, type Envelope } from '@electron-agent-bridge/core';
 
 /** Target kinds a protocol 1.0 client knows (its schema is a closed enum). */
 const V1_0_TARGET_KINDS = new Set(['window', 'view', 'webview', 'other']);

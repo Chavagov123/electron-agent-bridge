@@ -27,7 +27,7 @@ async function bundle(entry, options = {}) {
     platform: 'browser',
     target: 'chrome120',
     minify: true,
-    conditions: ['@eab/source'],
+    conditions: ['@electron-agent-bridge/source'],
     logLevel: 'warning',
     ...options,
   });

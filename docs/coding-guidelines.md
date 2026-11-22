@@ -41,7 +41,7 @@ These rules apply to every package. Lint, type-check and dependency-cruiser enfo
 
 ## TypeScript
 - `strict`, `exactOptionalPropertyTypes`, `noUncheckedIndexedAccess`, `verbatimModuleSyntax` are on. Do not weaken them.
-- `unknown` at boundaries, validated with Zod schemas from `@eab/core`. No `any` outside narrowly commented adapters.
+- `unknown` at boundaries, validated with Zod schemas from `@electron-agent-bridge/core`. No `any` outside narrowly commented adapters.
 - Public exports carry TSDoc.
 
 ## Tests

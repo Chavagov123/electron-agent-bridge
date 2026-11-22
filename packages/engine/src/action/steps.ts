@@ -6,8 +6,8 @@ import {
   type Limitation,
   type Locator,
   type ResolvedElement,
-} from '@eab/core';
-import type { ActionTarget, ControlState, Requirements } from '@eab/page-agent';
+} from '@electron-agent-bridge/core';
+import type { ActionTarget, ControlState, Requirements } from '@electron-agent-bridge/page-agent';
 import { z } from 'zod';
 
 import type { PageAgentClient } from '../page/page-agent-client.js';

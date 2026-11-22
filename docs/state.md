@@ -10,7 +10,7 @@ secret-looking keys (`token`, `password`, `apiKey`…) are redacted, like IPC va
 preload; preloads run in an isolated world):
 
 ```js
-import { registerState } from '@eab/electron/renderer';
+import { registerState } from '@electron-agent-bridge/electron/renderer';
 
 registerState('cart', store);                 // Redux / Redux Toolkit store
 registerState('prefs', usePrefs);             // Zustand store or hook
@@ -19,14 +19,14 @@ registerState('model', () => appModel.toJSON()); // anything: an object or a get
 registerState('prefs', prefsStore, { dispatch: (action) => applyAction(action) }); // make it dispatchable
 ```
 
-`@eab/electron/renderer` has no dependencies and is safe to ship: without the bridge every call is a
+`@electron-agent-bridge/electron/renderer` has no dependencies and is safe to ship: without the bridge every call is a
 no-op. It returns a function that unregisters the store; registering a name again replaces the store.
 
 **Devtools shim (opt-in).** Stores built with Redux DevTools support register themselves when the app
 turns on the shim:
 
 ```js
-require('@eab/electron').enableAgentBridge({ state: { devtoolsShim: true } });
+require('@electron-agent-bridge/electron').enableAgentBridge({ state: { devtoolsShim: true } });
 ```
 
 The bridge then defines `__REDUX_DEVTOOLS_EXTENSION__` (with `connect`) and

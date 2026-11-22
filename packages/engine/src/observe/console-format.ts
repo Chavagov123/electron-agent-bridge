@@ -1,4 +1,4 @@
-import type { LogEntry } from '@eab/core';
+import type { LogEntry } from '@electron-agent-bridge/core';
 import { z } from 'zod';
 
 const PreviewProperty = z.object({ name: z.string(), value: z.string().optional(), type: z.string() });

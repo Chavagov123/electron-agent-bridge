@@ -1,4 +1,4 @@
-import type { TargetKind } from '@eab/core';
+import type { TargetKind } from '@electron-agent-bridge/core';
 
 /** File stems that say nothing about the page (every app has an `index.html`). */
 const GENERIC_STEMS = new Set(['index', 'main', 'app', 'default', 'home', 'renderer']);

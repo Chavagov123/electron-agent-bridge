@@ -1,4 +1,4 @@
-import { BridgeError, type MethodData } from '@eab/core';
+import { BridgeError, type MethodData } from '@electron-agent-bridge/core';
 import { z } from 'zod';
 
 import { renderLimitations, untrusted } from '../render/text.js';

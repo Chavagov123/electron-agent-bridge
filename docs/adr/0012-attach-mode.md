@@ -8,7 +8,7 @@ v1 needs the runtime inside the app. Some apps cannot take it (fuses block Launc
 the code) but can be started with `--remote-debugging-port`, which no fuse controls.
 
 ## Decision
-A new package, `@eab/attach`, runs the engine in the calling process over one DevTools WebSocket per
+A new package, `@electron-agent-bridge/attach`, runs the engine in the calling process over one DevTools WebSocket per
 page (`WebSocketCdpTransport`), with pages read from `/json/list` (`RemoteTargetSource`). It returns an
 ordinary `BridgeClient`: the client now takes any `RpcCaller`, and an in-process dispatcher validates
 params against the protocol table like the runtime does. Main-process methods answer `UNSUPPORTED`;

@@ -1,5 +1,5 @@
 // @vitest-environment happy-dom
-import type { WaitCondition } from '@eab/core';
+import type { WaitCondition } from '@electron-agent-bridge/core';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { createAgent, type AgentResult, type PageAgent } from './agent.js';

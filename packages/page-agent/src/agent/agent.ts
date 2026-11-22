@@ -1,4 +1,4 @@
-import type { Locator } from '@eab/core';
+import type { Locator } from '@electron-agent-bridge/core';
 
 import { createActionApi, type ActionApi } from './action-api.js';
 import { diffLines } from './delta.js';

@@ -1,5 +1,10 @@
-import { BridgeError, ERROR_CODES, type ErrorCode, type Locator } from '@eab/core';
-import type { AgentResult, Match, SnapshotRequest, SnapshotResponse } from '@eab/page-agent';
+import { BridgeError, ERROR_CODES, type ErrorCode, type Locator } from '@electron-agent-bridge/core';
+import type {
+  AgentResult,
+  Match,
+  SnapshotRequest,
+  SnapshotResponse,
+} from '@electron-agent-bridge/page-agent';
 import { z } from 'zod';
 
 import type { CdpEvent, CdpTransport } from '../ports/cdp-transport.js';
@@ -7,7 +12,7 @@ import type { CdpEvent, CdpTransport } from '../ports/cdp-transport.js';
 /** Name of the isolated world the agent lives in (page scripts cannot see or tamper with it). */
 export const AGENT_WORLD = '__eab';
 
-/** The agent bundle to install (from `@eab/page-agent`; injectable for tests). */
+/** The agent bundle to install (from `@electron-agent-bridge/page-agent`; injectable for tests). */
 export interface AgentBundle {
   readonly source: string;
   readonly version: string;

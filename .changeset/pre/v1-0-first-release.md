@@ -1,10 +1,10 @@
 ---
-'@eab/core': minor
-'@eab/page-agent': minor
-'@eab/engine': minor
-'@eab/electron': minor
-'@eab/client': minor
-'@eab/mcp': minor
+'@electron-agent-bridge/core': minor
+'@electron-agent-bridge/page-agent': minor
+'@electron-agent-bridge/engine': minor
+'@electron-agent-bridge/electron': minor
+'@electron-agent-bridge/client': minor
+'@electron-agent-bridge/mcp': minor
 ---
 
 First release candidate of electron-agent-bridge: Integrated and Launch modes; targets, snapshots and

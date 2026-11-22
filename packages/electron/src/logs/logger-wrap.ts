@@ -1,6 +1,6 @@
 import { formatWithOptions } from 'node:util';
 
-import type { LogEntry } from '@eab/core';
+import type { LogEntry } from '@electron-agent-bridge/core';
 
 type Method = (this: unknown, ...args: unknown[]) => unknown;
 

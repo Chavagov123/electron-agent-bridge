@@ -1,5 +1,5 @@
 {
-  "name": "@eab/attach",
+  "name": "@electron-agent-bridge/attach",
   "version": "1.1.0-rc.0",
   "description": "Attach mode: drive the renderers of a running Electron app over its remote debugging port, without the in-app runtime.",
   "license": "MIT",
@@ -24,7 +24,7 @@
   "module": "./dist/index.js",
   "exports": {
     ".": {
-      "@eab/source": "./src/index.ts",
+      "@electron-agent-bridge/source": "./src/index.ts",
       "import": {
         "types": "./dist/index.d.ts",
         "default": "./dist/index.js"
@@ -44,10 +44,10 @@
     "check:package": "publint --strict && attw --pack . --profile node16"
   },
   "dependencies": {
-    "@eab/client": "workspace:*",
-    "@eab/core": "workspace:*",
-    "@eab/engine": "workspace:*",
-    "@eab/page-agent": "workspace:*",
+    "@electron-agent-bridge/client": "workspace:*",
+    "@electron-agent-bridge/core": "workspace:*",
+    "@electron-agent-bridge/engine": "workspace:*",
+    "@electron-agent-bridge/page-agent": "workspace:*",
     "zod": "4.6.7"
   },
   "engines": {

@@ -1,6 +1,6 @@
 import { Worker } from 'node:worker_threads';
 
-import type { MappedLocation, ScriptLocation, StackMapper } from '@eab/engine';
+import type { MappedLocation, ScriptLocation, StackMapper } from '@electron-agent-bridge/engine';
 
 import { SOURCE_MAP_WORKER_SOURCE } from '../generated/source-map-worker-source.js';
 import type { MapReply, MapRequest } from './source-map-worker.js';

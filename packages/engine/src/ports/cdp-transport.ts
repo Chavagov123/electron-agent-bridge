@@ -1,4 +1,4 @@
-import type { DetachReason } from '@eab/core';
+import type { DetachReason } from '@electron-agent-bridge/core';
 
 export type { DetachReason };
 

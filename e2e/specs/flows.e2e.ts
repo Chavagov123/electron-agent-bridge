@@ -5,7 +5,7 @@ import { dirname, join } from 'node:path';
 import { createRequire } from 'node:module';
 import { fileURLToPath } from 'node:url';
 
-import { handshakeFileName } from '@eab/core';
+import { handshakeFileName } from '@electron-agent-bridge/core';
 import { afterEach, describe, expect, it } from 'vitest';
 
 import { electronBinary, selectedVersions } from '../harness/electron-versions.js';

@@ -1,4 +1,4 @@
-import { WaitConditionSchema } from '@eab/core';
+import { WaitConditionSchema } from '@electron-agent-bridge/core';
 import { z } from 'zod';
 
 import { renderLimitations, untrusted } from '../render/text.js';

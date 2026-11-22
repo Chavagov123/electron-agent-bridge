@@ -1,4 +1,4 @@
-import type { Locator } from '@eab/core';
+import type { Locator } from '@electron-agent-bridge/core';
 
 import { resolveOne, type ActionabilityContext } from './actionability.js';
 import { AgentFailure } from './failure.js';

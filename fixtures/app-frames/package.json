@@ -7,6 +7,6 @@
   "main": "main.cjs",
   "dependencies": {
     "@eab-fixtures/fixture-kit": "workspace:*",
-    "@eab/electron": "workspace:*"
+    "@electron-agent-bridge/electron": "workspace:*"
   }
 }

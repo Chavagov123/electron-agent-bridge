@@ -1,7 +1,7 @@
 import { chmodSync, rmSync } from 'node:fs';
 import { createServer, type Server, type Socket } from 'node:net';
 
-import { LineDecoder, encodeLine } from '@eab/core';
+import { LineDecoder, encodeLine } from '@electron-agent-bridge/core';
 
 import type { RpcSession } from './rpc-session.js';
 

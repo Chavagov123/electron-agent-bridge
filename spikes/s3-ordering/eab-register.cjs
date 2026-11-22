@@ -1,4 +1,4 @@
-// Stand-in for @eab/electron/register and inject.cjs: wrap ipcMain registration as early as possible.
+// Stand-in for @electron-agent-bridge/electron/register and inject.cjs: wrap ipcMain registration as early as possible.
 'use strict';
 if (process.type === 'browser' && !globalThis[Symbol.for('eab.spike.installed')]) {
   globalThis[Symbol.for('eab.spike.installed')] = true;

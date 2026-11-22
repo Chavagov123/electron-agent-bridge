@@ -1,4 +1,4 @@
-# @eab/page-agent
+# @electron-agent-bridge/page-agent
 
 ## 1.1.0-rc.0
 
@@ -16,7 +16,7 @@
   agents run with `act`, each with a locator that outlives refs; password values are never recorded.
   `eab record --out flow.yaml` and the MCP `session` actions `recordStart`/`recordStop` turn that into a
   flow. `eab export <flow> --playwright` (or `toPlaywright(flow)`) writes the flow as a Playwright test
-  for Electron. `stringifyFlow` and `flowFromRecording` are new in `@eab/client`.
+  for Electron. `stringifyFlow` and `flowFromRecording` are new in `@electron-agent-bridge/client`.
 
 ### Patch Changes
 

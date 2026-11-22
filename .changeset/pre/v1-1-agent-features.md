@@ -1,9 +1,9 @@
 ---
-'@eab/core': minor
-'@eab/page-agent': minor
-'@eab/engine': minor
-'@eab/electron': minor
-'@eab/mcp': minor
+'@electron-agent-bridge/core': minor
+'@electron-agent-bridge/page-agent': minor
+'@electron-agent-bridge/engine': minor
+'@electron-agent-bridge/electron': minor
+'@electron-agent-bridge/mcp': minor
 ---
 
 Component state and faster actions. `state.component` (MCP `state action=component ref=…`) reads the

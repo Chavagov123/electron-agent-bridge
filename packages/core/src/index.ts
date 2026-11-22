@@ -1,5 +1,5 @@
 /**
- * @eab/core: Shared contracts: protocol table, error codes, result envelopes, budgets and privacy helpers. Isomorphic; depends on zod only.
+ * @electron-agent-bridge/core: Shared contracts: protocol table, error codes, result envelopes, budgets and privacy helpers. Isomorphic; depends on zod only.
  * @packageDocumentation
  */
 export {

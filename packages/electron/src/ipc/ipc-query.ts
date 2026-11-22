@@ -6,7 +6,7 @@ import {
   type Limitation,
   type MethodData,
   type MethodInput,
-} from '@eab/core';
+} from '@electron-agent-bridge/core';
 
 import { MAX_CHANNELS, type IpcRecorder } from './ipc-recorder.js';
 

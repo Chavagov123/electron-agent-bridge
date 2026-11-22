@@ -3,7 +3,7 @@
 // into a self-contained script by scripts/build-preload.mjs (src/generated/source-map-worker-source.ts).
 import { parentPort } from 'node:worker_threads';
 
-import type { MappedLocation, ScriptLocation } from '@eab/engine';
+import type { MappedLocation, ScriptLocation } from '@electron-agent-bridge/engine';
 
 import { SourceMapResolver } from './source-maps.js';
 

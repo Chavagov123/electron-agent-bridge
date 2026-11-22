@@ -2,8 +2,8 @@ import { existsSync, writeFileSync } from 'node:fs';
 import { connect as netConnect } from 'node:net';
 import { join } from 'node:path';
 
-import { connect, listInstances } from '@eab/client';
-import { PROTOCOL_VERSION, encodeLine, handshakeFileName, type Handshake } from '@eab/core';
+import { connect, listInstances } from '@electron-agent-bridge/client';
+import { PROTOCOL_VERSION, encodeLine, handshakeFileName, type Handshake } from '@electron-agent-bridge/core';
 import { afterEach, describe, expect, it } from 'vitest';
 
 import { selectedVersions } from '../harness/electron-versions.js';

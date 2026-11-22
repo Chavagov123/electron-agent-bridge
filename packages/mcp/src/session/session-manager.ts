@@ -1,5 +1,11 @@
-import { BridgeError } from '@eab/core';
-import type { AppInstance, BridgeClient, ConnectOptions, LaunchedApp, LaunchOptions } from '@eab/client';
+import { BridgeError } from '@electron-agent-bridge/core';
+import type {
+  AppInstance,
+  BridgeClient,
+  ConnectOptions,
+  LaunchedApp,
+  LaunchOptions,
+} from '@electron-agent-bridge/client';
 
 /** The client functions the MCP server needs; injected so tools can be tested without sockets. */
 export interface ClientApi {

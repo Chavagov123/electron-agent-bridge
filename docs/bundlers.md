@@ -8,7 +8,7 @@ plain webpack, esbuild, Rollup). Two rules:
 
    ```js
    // src/main/index.ts
-   import '@eab/electron/register';
+   import '@electron-agent-bridge/electron/register';
    import { app, BrowserWindow } from 'electron';
    // …the app
    ```
@@ -32,14 +32,14 @@ plain webpack, esbuild, Rollup). Two rules:
 import { defineConfig, externalizeDepsPlugin } from 'electron-vite';
 
 export default defineConfig({
-  // Dependencies, @eab/electron included, stay external (electron-vite's default with this plugin).
+  // Dependencies, @electron-agent-bridge/electron included, stay external (electron-vite's default with this plugin).
   main: { plugins: [externalizeDepsPlugin()] },
   preload: { plugins: [externalizeDepsPlugin()] },
   renderer: {},
 });
 ```
 
-`registerState` from `@eab/electron/renderer` is dependency-free and is bundled into the renderer like
+`registerState` from `@electron-agent-bridge/electron/renderer` is dependency-free and is bundled into the renderer like
 any other module.
 
 ## Electron Forge (webpack)
@@ -49,17 +49,17 @@ any other module.
 module.exports = {
   entry: './src/main.js',
   // Keep the bridge external (or delete this line to inline it).
-  externals: { '@eab/electron': 'commonjs @eab/electron', '@eab/electron/register': 'commonjs @eab/electron/register' },
+  externals: { '@electron-agent-bridge/electron': 'commonjs @electron-agent-bridge/electron', '@electron-agent-bridge/electron/register': 'commonjs @electron-agent-bridge/electron/register' },
 };
 ```
 
-With the Forge Vite plugin, list `@eab/electron` in `build.rollupOptions.external` of the main config,
+With the Forge Vite plugin, list `@electron-agent-bridge/electron` in `build.rollupOptions.external` of the main config,
 or leave it out to inline it.
 
 ## Plain webpack / esbuild / Rollup
 
 Target Node (`target: 'electron-main'`, `platform: 'node'`), keep `electron` external, and either keep
-`@eab/electron` external or let it be bundled.
+`@electron-agent-bridge/electron` external or let it be bundled.
 
 ## Packaged builds
 

@@ -4,7 +4,13 @@ import { createServer, type Server } from 'node:net';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 
-import { PROTOCOL_VERSION, encodeLine, handshakeFileName, socketPath, type Handshake } from '@eab/core';
+import {
+  PROTOCOL_VERSION,
+  encodeLine,
+  handshakeFileName,
+  socketPath,
+  type Handshake,
+} from '@electron-agent-bridge/core';
 import { afterEach, describe, expect, it } from 'vitest';
 
 import { connect } from './connect.js';

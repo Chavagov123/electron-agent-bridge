@@ -1,4 +1,4 @@
-# @eab/electron
+# @electron-agent-bridge/electron
 
 In-app runtime for the Electron main process, preload and renderer. Off unless explicitly enabled.
 

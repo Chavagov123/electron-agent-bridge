@@ -1,10 +1,10 @@
 /**
- * `@eab/electron/renderer`: for the app's renderer code (page scripts, not preloads). Dependency-free
+ * `@electron-agent-bridge/electron/renderer`: for the app's renderer code (page scripts, not preloads). Dependency-free
  * and safe to ship: without the bridge every call is a no-op.
  * @packageDocumentation
  */
 
-/** The registry the bridge's state hook defines in each app page (same key as `@eab/page-agent`). */
+/** The registry the bridge's state hook defines in each app page (same key as `@electron-agent-bridge/page-agent`). */
 const STATE_KEY = Symbol.for('electron-agent-bridge.v1.state');
 /** Registrations made before the hook ran (it can arrive late in a page's very first document). */
 const PENDING_KEY = Symbol.for('electron-agent-bridge.v1.state-pending');

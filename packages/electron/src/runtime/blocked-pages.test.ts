@@ -1,4 +1,4 @@
-import { BridgeError, ok } from '@eab/core';
+import { BridgeError, ok } from '@electron-agent-bridge/core';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { SyncWaits } from '../ipc/sync-waits.js';

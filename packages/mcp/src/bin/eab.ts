@@ -5,8 +5,8 @@
  */
 import { writeFileSync } from 'node:fs';
 
-import { attach } from '@eab/attach';
-import { connect, launch, listInstances } from '@eab/client';
+import { attach } from '@electron-agent-bridge/attach';
+import { connect, launch, listInstances } from '@electron-agent-bridge/client';
 
 import { runCli } from '../cli/run-cli.js';
 

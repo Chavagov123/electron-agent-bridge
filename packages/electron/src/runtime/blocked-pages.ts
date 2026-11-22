@@ -1,5 +1,5 @@
-import { BridgeError, type TargetKind } from '@eab/core';
-import { LATE, withDeadline } from '@eab/engine';
+import { BridgeError, type TargetKind } from '@electron-agent-bridge/core';
+import { LATE, withDeadline } from '@electron-agent-bridge/engine';
 
 import type { MethodHandlers } from '../control/rpc-session.js';
 import type { SyncWait, SyncWaits } from '../ipc/sync-waits.js';

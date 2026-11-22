@@ -1,5 +1,5 @@
 {
-  "name": "@eab/engine",
+  "name": "@electron-agent-bridge/engine",
   "version": "1.1.0-rc.0",
   "description": "Transport-agnostic snapshot, action, wait and observation engine. No Electron, Node or socket imports.",
   "license": "MIT",
@@ -24,7 +24,7 @@
   "module": "./dist/index.js",
   "exports": {
     ".": {
-      "@eab/source": "./src/index.ts",
+      "@electron-agent-bridge/source": "./src/index.ts",
       "import": {
         "types": "./dist/index.d.ts",
         "default": "./dist/index.js"
@@ -44,8 +44,8 @@
     "check:package": "publint --strict && attw --pack . --profile node16"
   },
   "dependencies": {
-    "@eab/core": "workspace:*",
-    "@eab/page-agent": "workspace:*",
+    "@electron-agent-bridge/core": "workspace:*",
+    "@electron-agent-bridge/page-agent": "workspace:*",
     "zod": "4.6.7"
   },
   "engines": {

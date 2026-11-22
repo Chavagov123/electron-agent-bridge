@@ -1,4 +1,4 @@
-import { BridgeError, type Limitation } from '@eab/core';
+import { BridgeError, type Limitation } from '@electron-agent-bridge/core';
 
 /** Opening and closing lines of an untrusted block (look-alikes inside a block are defanged). */
 export const UNTRUSTED_OPEN = '<untrusted-page-content>';

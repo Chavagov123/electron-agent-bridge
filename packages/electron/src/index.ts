@@ -1,5 +1,5 @@
 /**
- * @eab/electron: In-app runtime for the Electron main process, preload and renderer. Off unless explicitly enabled.
+ * @electron-agent-bridge/electron: In-app runtime for the Electron main process, preload and renderer. Off unless explicitly enabled.
  * @packageDocumentation
  */
 import * as electron from 'electron';
@@ -56,7 +56,7 @@ export interface BridgeStatus {
 
 /**
  * Turn the bridge on for this app — only if `EAB_ENABLE=1` and the app is unpackaged (or opted in).
- * Call it, or `import '@eab/electron/register'`, before the app registers IPC handlers or creates windows.
+ * Call it, or `import '@electron-agent-bridge/electron/register'`, before the app registers IPC handlers or creates windows.
  * Safe to call more than once and from several bundle copies: the first call wins.
  */
 export function enableAgentBridge(options: BridgeOptions = {}): BridgeStatus {
@@ -137,7 +137,7 @@ function configFromEnvironment(options: BridgeOptions): RuntimeConfig {
 function warnIgnoredOptions(): void {
   process.stderr.write(
     '[electron-agent-bridge] enableAgentBridge(options) ignored: the bridge is already enabled ' +
-      '(e.g. by @eab/electron/register). Pass options in the first call and drop the register import.\n',
+      '(e.g. by @electron-agent-bridge/electron/register). Pass options in the first call and drop the register import.\n',
   );
 }
 

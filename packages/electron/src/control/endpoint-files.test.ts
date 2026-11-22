@@ -2,7 +2,7 @@ import { chmodSync, existsSync, mkdtempSync, readFileSync, statSync, writeFileSy
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 
-import { PROTOCOL_VERSION, type Handshake } from '@eab/core';
+import { PROTOCOL_VERSION, type Handshake } from '@electron-agent-bridge/core';
 import { describe, expect, it } from 'vitest';
 
 import {

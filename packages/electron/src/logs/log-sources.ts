@@ -1,4 +1,4 @@
-import type { LogEntry } from '@eab/core';
+import type { LogEntry } from '@electron-agent-bridge/core';
 
 import { formatArgs, levelOfMethod, wrapLoggerMethods, type ReentryGuard } from './logger-wrap.js';
 

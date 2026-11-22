@@ -2,9 +2,9 @@ import { readFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import { attach } from '@eab/attach';
-import { connect, launch, listInstances } from '@eab/client';
-import { BridgeError, FEATURES } from '@eab/core';
+import { attach } from '@electron-agent-bridge/attach';
+import { connect, launch, listInstances } from '@electron-agent-bridge/client';
+import { BridgeError, FEATURES } from '@electron-agent-bridge/core';
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import {
   CallToolRequestSchema,
@@ -36,7 +36,7 @@ function ownVersion(): string {
         name?: string;
         version?: string;
       };
-      if (pkg.name === '@eab/mcp' && typeof pkg.version === 'string') return pkg.version;
+      if (pkg.name === '@electron-agent-bridge/mcp' && typeof pkg.version === 'string') return pkg.version;
     } catch {
       // No package.json here: keep going up.
     }

@@ -1,7 +1,7 @@
 import { tmpdir } from 'node:os';
 import { dirname, join } from 'node:path';
 
-import { PROTOCOL_VERSION, endpointDirectory, type Handshake } from '@eab/core';
+import { PROTOCOL_VERSION, endpointDirectory, type Handshake } from '@electron-agent-bridge/core';
 import type { App } from 'electron';
 
 import { FileAuditLog, NO_AUDIT, type AuditSink } from '../audit/audit-log.js';

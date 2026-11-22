@@ -1,4 +1,4 @@
-import type { Capability, Feature } from '@eab/core';
+import type { Capability, Feature } from '@electron-agent-bridge/core';
 import type { z } from 'zod';
 
 import type { SessionManager } from '../session/session-manager.js';

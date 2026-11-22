@@ -110,16 +110,16 @@ importers:
       '@eab-fixtures/app-state':
         specifier: workspace:*
         version: link:../fixtures/app-state
-      '@eab/attach':
+      '@electron-agent-bridge/attach':
         specifier: workspace:*
         version: link:../packages/attach
-      '@eab/client':
+      '@electron-agent-bridge/client':
         specifier: workspace:*
         version: link:../packages/client
-      '@eab/core':
+      '@electron-agent-bridge/core':
         specifier: workspace:*
         version: link:../packages/core
-      '@eab/mcp':
+      '@electron-agent-bridge/mcp':
         specifier: workspace:*
         version: link:../packages/mcp
       '@electron/fuses':
@@ -146,7 +146,7 @@ importers:
       '@eab-fixtures/fixture-kit':
         specifier: workspace:*
         version: link:../fixture-kit
-      '@eab/electron':
+      '@electron-agent-bridge/electron':
         specifier: workspace:*
         version: link:../../packages/electron
 
@@ -155,7 +155,7 @@ importers:
       '@eab-fixtures/fixture-kit':
         specifier: workspace:*
         version: link:../fixture-kit
-      '@eab/electron':
+      '@electron-agent-bridge/electron':
         specifier: workspace:*
         version: link:../../packages/electron
     devDependencies:
@@ -168,7 +168,7 @@ importers:
       '@eab-fixtures/fixture-kit':
         specifier: workspace:*
         version: link:../fixture-kit
-      '@eab/electron':
+      '@electron-agent-bridge/electron':
         specifier: workspace:*
         version: link:../../packages/electron
     devDependencies:
@@ -190,7 +190,7 @@ importers:
       '@eab-fixtures/fixture-kit':
         specifier: workspace:*
         version: link:../fixture-kit
-      '@eab/electron':
+      '@electron-agent-bridge/electron':
         specifier: workspace:*
         version: link:../../packages/electron
 
@@ -199,7 +199,7 @@ importers:
       '@eab-fixtures/fixture-kit':
         specifier: workspace:*
         version: link:../fixture-kit
-      '@eab/electron':
+      '@electron-agent-bridge/electron':
         specifier: workspace:*
         version: link:../../packages/electron
 
@@ -208,7 +208,7 @@ importers:
       '@eab-fixtures/fixture-kit':
         specifier: workspace:*
         version: link:../fixture-kit
-      '@eab/electron':
+      '@electron-agent-bridge/electron':
         specifier: workspace:*
         version: link:../../packages/electron
 
@@ -217,7 +217,7 @@ importers:
       '@eab-fixtures/fixture-kit':
         specifier: workspace:*
         version: link:../fixture-kit
-      '@eab/electron':
+      '@electron-agent-bridge/electron':
         specifier: workspace:*
         version: link:../../packages/electron
 
@@ -226,7 +226,7 @@ importers:
       '@eab-fixtures/fixture-kit':
         specifier: workspace:*
         version: link:../fixture-kit
-      '@eab/electron':
+      '@electron-agent-bridge/electron':
         specifier: workspace:*
         version: link:../../packages/electron
 
@@ -235,7 +235,7 @@ importers:
       '@eab-fixtures/fixture-kit':
         specifier: workspace:*
         version: link:../fixture-kit
-      '@eab/electron':
+      '@electron-agent-bridge/electron':
         specifier: workspace:*
         version: link:../../packages/electron
 
@@ -244,7 +244,7 @@ importers:
       '@eab-fixtures/fixture-kit':
         specifier: workspace:*
         version: link:../fixture-kit
-      '@eab/electron':
+      '@electron-agent-bridge/electron':
         specifier: workspace:*
         version: link:../../packages/electron
     devDependencies:
@@ -265,16 +265,16 @@ importers:
 
   packages/attach:
     dependencies:
-      '@eab/client':
+      '@electron-agent-bridge/client':
         specifier: workspace:*
         version: link:../client
-      '@eab/core':
+      '@electron-agent-bridge/core':
         specifier: workspace:*
         version: link:../core
-      '@eab/engine':
+      '@electron-agent-bridge/engine':
         specifier: workspace:*
         version: link:../engine
-      '@eab/page-agent':
+      '@electron-agent-bridge/page-agent':
         specifier: workspace:*
         version: link:../page-agent
       zod:
@@ -283,10 +283,10 @@ importers:
 
   packages/client:
     dependencies:
-      '@eab/core':
+      '@electron-agent-bridge/core':
         specifier: workspace:*
         version: link:../core
-      '@eab/electron':
+      '@electron-agent-bridge/electron':
         specifier: workspace:*
         version: link:../electron
       yaml:
@@ -308,13 +308,13 @@ importers:
 
   packages/electron:
     dependencies:
-      '@eab/core':
+      '@electron-agent-bridge/core':
         specifier: workspace:*
         version: link:../core
-      '@eab/engine':
+      '@electron-agent-bridge/engine':
         specifier: workspace:*
         version: link:../engine
-      '@eab/page-agent':
+      '@electron-agent-bridge/page-agent':
         specifier: workspace:*
         version: link:../page-agent
     devDependencies:
@@ -327,10 +327,10 @@ importers:
 
   packages/engine:
     dependencies:
-      '@eab/core':
+      '@electron-agent-bridge/core':
         specifier: workspace:*
         version: link:../core
-      '@eab/page-agent':
+      '@electron-agent-bridge/page-agent':
         specifier: workspace:*
         version: link:../page-agent
       zod:
@@ -339,13 +339,13 @@ importers:
 
   packages/mcp:
     dependencies:
-      '@eab/attach':
+      '@electron-agent-bridge/attach':
         specifier: workspace:*
         version: link:../attach
-      '@eab/client':
+      '@electron-agent-bridge/client':
         specifier: workspace:*
         version: link:../client
-      '@eab/core':
+      '@electron-agent-bridge/core':
         specifier: workspace:*
         version: link:../core
       '@modelcontextprotocol/sdk':
@@ -357,7 +357,7 @@ importers:
 
   packages/page-agent:
     devDependencies:
-      '@eab/core':
+      '@electron-agent-bridge/core':
         specifier: workspace:*
         version: link:../core
 

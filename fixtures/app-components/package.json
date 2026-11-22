@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@eab-fixtures/fixture-kit": "workspace:*",
-    "@eab/electron": "workspace:*"
+    "@electron-agent-bridge/electron": "workspace:*"
   },
   "devDependencies": {
     "esbuild": "0.28.2",

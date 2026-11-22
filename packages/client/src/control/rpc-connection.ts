@@ -8,7 +8,7 @@ import {
   encodeLine,
   type ErrorCode,
   type RpcResponse,
-} from '@eab/core';
+} from '@electron-agent-bridge/core';
 
 interface Pending {
   readonly resolve: (result: unknown) => void;

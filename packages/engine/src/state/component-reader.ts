@@ -10,8 +10,8 @@ import {
   type ErrorCode,
   type MethodData,
   type MethodInput,
-} from '@eab/core';
-import { COMPONENT_READER_FUNCTION } from '@eab/page-agent';
+} from '@electron-agent-bridge/core';
+import { COMPONENT_READER_FUNCTION } from '@electron-agent-bridge/page-agent';
 import { z } from 'zod';
 
 import type { AgentPool } from '../page/agent-pool.js';

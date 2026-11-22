@@ -2,8 +2,8 @@ import { randomBytes } from 'node:crypto';
 import { chmodSync, lstatSync, mkdirSync, readdirSync, rmSync, statSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 
-import { defaultEndpointDirectory } from '@eab/client';
-import { BridgeError } from '@eab/core';
+import { defaultEndpointDirectory } from '@electron-agent-bridge/client';
+import { BridgeError } from '@electron-agent-bridge/core';
 
 /** Where tool output too large to return inline is written. Returns the file path. */
 export interface SpillSink {

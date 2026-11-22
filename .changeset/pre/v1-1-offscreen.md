@@ -1,7 +1,7 @@
 ---
-'@eab/core': minor
-'@eab/electron': minor
-'@eab/engine': minor
+'@electron-agent-bridge/core': minor
+'@electron-agent-bridge/electron': minor
+'@electron-agent-bridge/engine': minor
 ---
 
 Offscreen windows (`webPreferences.offscreen`) are targets of kind `offscreen`: snapshots, actions and

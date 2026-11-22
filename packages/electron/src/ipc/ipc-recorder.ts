@@ -1,4 +1,4 @@
-import type { IpcFeed, IpcFeedPage } from '@eab/engine';
+import type { IpcFeed, IpcFeedPage } from '@electron-agent-bridge/engine';
 import {
   ByteRing,
   CAPS,
@@ -11,7 +11,7 @@ import {
   type IpcEvent,
   type MethodData,
   type ShapeNode,
-} from '@eab/core';
+} from '@electron-agent-bridge/core';
 
 /** Reserved for the preload's uplink to main; never recorded or listed. */
 export const UPLINK_CHANNEL = '__eab:uplink';

@@ -1,4 +1,4 @@
-import type { Action, Locator, RecordedEvent } from '@eab/core';
+import type { Action, Locator, RecordedEvent } from '@electron-agent-bridge/core';
 import { stringify } from 'yaml';
 
 import type { Flow, FlowApp, FlowStep } from './flow-schema.js';

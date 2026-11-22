@@ -29,13 +29,13 @@ are not captured.
 The main `console` is recorded unless the app turns it off:
 
 ```js
-require('@eab/electron').enableAgentBridge({ logs: { mainConsole: false } });
+require('@electron-agent-bridge/electron').enableAgentBridge({ logs: { mainConsole: false } });
 ```
 
 ### The app's own loggers
 
 ```js
-const { addLogSource, loggerSource } = require('@eab/electron');
+const { addLogSource, loggerSource } = require('@electron-agent-bridge/electron');
 const log = require('electron-log'); // or winston, pino, any object with logger methods
 
 addLogSource(loggerSource('app', log)); // wraps error/warn/info/log/debug/verbose/trace

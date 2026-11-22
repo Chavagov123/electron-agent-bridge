@@ -1,4 +1,4 @@
-import { BridgeClient, type RpcCaller } from '@eab/client';
+import { BridgeClient, type RpcCaller } from '@electron-agent-bridge/client';
 import {
   BridgeError,
   LIMITATION_CODES,
@@ -10,7 +10,7 @@ import {
   type Handshake,
   type MethodInput,
   type MethodName,
-} from '@eab/core';
+} from '@electron-agent-bridge/core';
 import {
   ActionEngine,
   AgentPool,
@@ -33,8 +33,8 @@ import {
   withDeadline,
   type Clock,
   type Disposable,
-} from '@eab/engine';
-import { AGENT_SOURCE, AGENT_VERSION, stateHookSource } from '@eab/page-agent';
+} from '@electron-agent-bridge/engine';
+import { AGENT_SOURCE, AGENT_VERSION, stateHookSource } from '@electron-agent-bridge/page-agent';
 import { z } from 'zod';
 
 import { RemoteTargetSource } from './remote-targets.js';

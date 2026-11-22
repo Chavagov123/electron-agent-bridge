@@ -1,5 +1,5 @@
 // Stores of the kinds real apps use, registered the ways real apps would. Bundled by build.mjs.
-import { registerState } from '@eab/electron/renderer';
+import { registerState } from '@electron-agent-bridge/electron/renderer';
 import { configureStore, createSlice } from '@reduxjs/toolkit';
 import { observable, runInAction } from 'mobx';
 import { devtools } from 'zustand/middleware';

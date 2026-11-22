@@ -9,7 +9,11 @@
 import { writeFileSync } from 'node:fs';
 import Module from 'node:module';
 
-import { LAUNCH_OPTIONS_ENV, parseLaunchOptions, type LaunchBridgeOptions } from '@eab/core';
+import {
+  LAUNCH_OPTIONS_ENV,
+  parseLaunchOptions,
+  type LaunchBridgeOptions,
+} from '@electron-agent-bridge/core';
 
 import type { BridgeOptions, BridgeStatus, enableAgentBridge as EnableAgentBridge } from './index.js';
 

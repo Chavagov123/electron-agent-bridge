@@ -1,4 +1,4 @@
-import { RECORD_BINDING as AGENT_BINDING } from '@eab/page-agent';
+import { RECORD_BINDING as AGENT_BINDING } from '@electron-agent-bridge/page-agent';
 import { describe, expect, it } from 'vitest';
 
 import { ActionEngine } from '../action/action-engine.js';

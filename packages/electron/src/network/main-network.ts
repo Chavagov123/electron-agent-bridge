@@ -1,7 +1,7 @@
 import { subscribe, unsubscribe } from 'node:diagnostics_channel';
 import { performance } from 'node:perf_hooks';
 
-import type { ExternalRequestEnd, ExternalRequestStart } from '@eab/engine';
+import type { ExternalRequestEnd, ExternalRequestStart } from '@electron-agent-bridge/engine';
 
 import { safely } from '../ipc/ipc-main-wrapper.js';
 

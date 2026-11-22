@@ -1,4 +1,4 @@
-import { BridgeError } from '@eab/core';
+import { BridgeError } from '@electron-agent-bridge/core';
 import { describe, expect, it } from 'vitest';
 
 import type { TargetDescriptor } from '../ports/target-source.js';

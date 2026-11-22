@@ -1,4 +1,4 @@
-import { REDACTED, isSensitiveKey } from '@eab/core';
+import { REDACTED, isSensitiveKey } from '@electron-agent-bridge/core';
 
 /** Longest URL kept; long query strings and data URLs are cut. */
 export const MAX_URL_CHARS = 2_000;

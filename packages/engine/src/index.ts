@@ -1,5 +1,5 @@
 /**
- * @eab/engine: Transport-agnostic automation engine: targets, snapshots, actions, waits and observation.
+ * @electron-agent-bridge/engine: Transport-agnostic automation engine: targets, snapshots, actions, waits and observation.
  * @packageDocumentation
  */
 export { ActionEngine, DEFAULT_ACTION_TIMEOUT_MS, type ActionEngineDeps } from './action/action-engine.js';

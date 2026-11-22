@@ -21,7 +21,7 @@ Arguments and results are recorded as **shapes** (`number[2]`, `{id: number}[1]`
 only for channels the app opts in, and then with secret-looking keys redacted:
 
 ```js
-require('@eab/electron').enableAgentBridge({ ipc: { values: ['settings:*'] } });
+require('@electron-agent-bridge/electron').enableAgentBridge({ ipc: { values: ['settings:*'] } });
 ```
 
 ### Inferred types (1.1)

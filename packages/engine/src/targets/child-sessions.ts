@@ -1,4 +1,4 @@
-import type { TargetKind } from '@eab/core';
+import type { TargetKind } from '@electron-agent-bridge/core';
 import { z } from 'zod';
 
 import type { CdpEvent, CdpTransport, DetachReason, Disposable } from '../ports/cdp-transport.js';

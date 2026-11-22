@@ -1,7 +1,7 @@
 import { channel } from 'node:diagnostics_channel';
 import { EventEmitter } from 'node:events';
 
-import { NetworkLog } from '@eab/engine';
+import { NetworkLog } from '@electron-agent-bridge/engine';
 import { afterEach, describe, expect, it } from 'vitest';
 
 import { MainNetworkCapture, type NetLike } from './main-network.js';

@@ -4,7 +4,7 @@ import { createRequire } from 'node:module';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import { parseFlow, toPlaywright } from '@eab/client';
+import { parseFlow, toPlaywright } from '@electron-agent-bridge/client';
 import { afterEach, describe, expect, it } from 'vitest';
 
 import { electronBinary, selectedVersions } from '../harness/electron-versions.js';

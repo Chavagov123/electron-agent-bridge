@@ -1,8 +1,8 @@
 import { existsSync, readFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 
-import { connect, type BridgeClient } from '@eab/client';
-import { PROTOCOL_VERSION, handshakeFileName, isProtocolCompatible } from '@eab/core';
+import { connect, type BridgeClient } from '@electron-agent-bridge/client';
+import { PROTOCOL_VERSION, handshakeFileName, isProtocolCompatible } from '@electron-agent-bridge/core';
 import { afterEach, describe, expect, it } from 'vitest';
 
 import { selectedVersions } from '../harness/electron-versions.js';

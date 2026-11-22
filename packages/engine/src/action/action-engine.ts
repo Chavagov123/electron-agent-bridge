@@ -7,8 +7,8 @@ import {
   type MethodInput,
   type ResolvedElement,
   type StepResult,
-} from '@eab/core';
-import type { Settled, SnapshotResponse } from '@eab/page-agent';
+} from '@electron-agent-bridge/core';
+import type { Settled, SnapshotResponse } from '@electron-agent-bridge/page-agent';
 
 import { ActionObserver } from '../observe/action-observer.js';
 import type { AgentPool } from '../page/agent-pool.js';

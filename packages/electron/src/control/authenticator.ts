@@ -6,7 +6,7 @@ import {
   isProtocolCompatible,
   type Capability,
   type MethodInput,
-} from '@eab/core';
+} from '@electron-agent-bridge/core';
 
 export interface AuthenticatorDeps {
   readonly token: string;

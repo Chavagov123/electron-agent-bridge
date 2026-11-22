@@ -7,8 +7,8 @@ import {
   type MethodData,
   type MethodInput,
   type WaitCondition,
-} from '@eab/core';
-import type { ConditionCheck } from '@eab/page-agent';
+} from '@electron-agent-bridge/core';
+import type { ConditionCheck } from '@electron-agent-bridge/page-agent';
 import { z } from 'zod';
 
 import type { AgentPool } from '../page/agent-pool.js';

@@ -1,5 +1,5 @@
-import type { LogEntry } from '@eab/core';
-import type { LogBook, NewLogEntry } from '@eab/engine';
+import type { LogEntry } from '@electron-agent-bridge/core';
+import type { LogBook, NewLogEntry } from '@electron-agent-bridge/engine';
 import type { App, WebContents } from 'electron';
 
 import { safely } from '../ipc/ipc-main-wrapper.js';

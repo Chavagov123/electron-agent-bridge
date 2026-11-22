@@ -2,7 +2,7 @@ import { installClickTracking } from './clicks.js';
 import { installDevtoolsShim } from './devtools-shim.js';
 import { StateRegistry } from './registry.js';
 
-/** Where `registerState` (in `@eab/electron/renderer`) and the runtime find the registry. */
+/** Where `registerState` (in `@electron-agent-bridge/electron/renderer`) and the runtime find the registry. */
 export const STATE_KEY = 'electron-agent-bridge.v1.state';
 /** Where `registerState` queues stores registered before this hook ran. */
 export const STATE_PENDING_KEY = 'electron-agent-bridge.v1.state-pending';

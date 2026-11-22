@@ -7,7 +7,7 @@ import {
   defaultEndpointDirectory,
   readFuses,
   type LaunchStrategy,
-} from '@eab/client';
+} from '@electron-agent-bridge/client';
 
 import { renderError } from '../render/text.js';
 import type { ClientApi } from '../session/session-manager.js';
@@ -79,7 +79,7 @@ export async function doctorExecutable(executable: string, io: CliIo): Promise<n
   const none = strategies.every((strategy) => blocked.has(strategy));
   if (none) {
     lines.push(
-      "Neither strategy can work: use Integrated mode (import '@eab/electron/register' first in main, start with EAB_ENABLE=1).",
+      "Neither strategy can work: use Integrated mode (import '@electron-agent-bridge/electron/register' first in main, start with EAB_ENABLE=1).",
     );
   }
   lines.push(

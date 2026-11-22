@@ -8,8 +8,8 @@ import {
   runFlow,
   stringifyFlow,
   type BridgeClient,
-} from '@eab/client';
-import { handshakeFileName, type RecordedEvent } from '@eab/core';
+} from '@electron-agent-bridge/client';
+import { handshakeFileName, type RecordedEvent } from '@electron-agent-bridge/core';
 import { afterEach, describe, expect, it } from 'vitest';
 
 import { isolatedEndpoint, type IsolatedEndpoint } from '../harness/endpoint-env.js';

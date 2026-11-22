@@ -21,7 +21,7 @@ the app (or its launcher) grants it:
 
 ```js
 // Integrated mode: the app raises its own ceiling.
-require('@eab/electron').enableAgentBridge({ capabilities: ['observe', 'interact', 'eval'] });
+require('@electron-agent-bridge/electron').enableAgentBridge({ capabilities: ['observe', 'interact', 'eval'] });
 ```
 
 ```sh

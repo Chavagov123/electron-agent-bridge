@@ -2,7 +2,7 @@ import { mkdirSync, mkdtempSync, readFileSync, readdirSync, rmSync, writeFileSyn
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 
-import { BridgeError } from '@eab/core';
+import { BridgeError } from '@electron-agent-bridge/core';
 import { afterEach, describe, expect, it } from 'vitest';
 
 import type { BridgeClient } from '../api/bridge-client.js';

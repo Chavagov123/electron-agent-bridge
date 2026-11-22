@@ -1,4 +1,4 @@
-import type { Action, Locator } from '@eab/core';
+import type { Action, Locator } from '@electron-agent-bridge/core';
 
 import { accessibleName } from './accname.js';
 import { snapshotRoleOf } from './clickable.js';

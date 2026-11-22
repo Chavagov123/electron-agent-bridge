@@ -5,7 +5,7 @@ import {
   type MethodData,
   type MethodInput,
   type TargetInfo,
-} from '@eab/core';
+} from '@electron-agent-bridge/core';
 
 import type { ActionEngine } from '../action/action-engine.js';
 import type { AgentSnapshotter } from '../snapshot/agent-snapshotter.js';

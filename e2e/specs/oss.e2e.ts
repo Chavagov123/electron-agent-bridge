@@ -4,7 +4,7 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { promisify } from 'node:util';
 
-import { launch, type BridgeClient, type LaunchedApp } from '@eab/client';
+import { launch, type BridgeClient, type LaunchedApp } from '@electron-agent-bridge/client';
 import { afterEach, beforeAll, describe, expect, it } from 'vitest';
 
 import { electronBinary, selectedVersions } from '../harness/electron-versions.js';

@@ -4,8 +4,8 @@ import { createRequire } from 'node:module';
 import { basename, dirname, join } from 'node:path';
 import { promisify } from 'node:util';
 
-import { connect, launch } from '@eab/client';
-import { handshakeFileName } from '@eab/core';
+import { connect, launch } from '@electron-agent-bridge/client';
+import { handshakeFileName } from '@electron-agent-bridge/core';
 import { afterEach, describe, expect, it } from 'vitest';
 
 import { BinaryUnavailable, fusedElectron, packagedElectron } from '../harness/binaries.js';
@@ -112,7 +112,7 @@ describe.each(selectedVersions())('Launch mode on Electron %s', (electron) => {
       message: expect.stringMatching(
         /node-options: not tried: the EnableNodeOptionsEnvironmentVariable fuse.*inspector: not tried: the EnableNodeCliInspectArguments fuse/s,
       ) as unknown,
-      hint: expect.stringContaining("import '@eab/electron/register'") as unknown,
+      hint: expect.stringContaining("import '@electron-agent-bridge/electron/register'") as unknown,
     });
     await waitFor(() => countProcesses(basename(executable)) === 0, { what: 'blocked attempts to exit' });
   }, 60_000);

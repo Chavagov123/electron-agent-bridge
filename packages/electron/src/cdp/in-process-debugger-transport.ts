@@ -1,5 +1,5 @@
-import { BridgeError } from '@eab/core';
-import type { CdpEvent, CdpTransport, DetachReason, Disposable } from '@eab/engine';
+import { BridgeError } from '@electron-agent-bridge/core';
+import type { CdpEvent, CdpTransport, DetachReason, Disposable } from '@electron-agent-bridge/engine';
 import type { Debugger } from 'electron';
 
 /** CDP protocol version requested from `webContents.debugger`. */

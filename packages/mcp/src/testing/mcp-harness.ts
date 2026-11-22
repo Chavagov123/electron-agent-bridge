@@ -1,5 +1,5 @@
-import type { BridgeClient, LaunchedApp, LaunchOptions } from '@eab/client';
-import { PROTOCOL_VERSION, type Handshake } from '@eab/core';
+import type { BridgeClient, LaunchedApp, LaunchOptions } from '@electron-agent-bridge/client';
+import { PROTOCOL_VERSION, type Handshake } from '@electron-agent-bridge/core';
 import { Client } from '@modelcontextprotocol/sdk/client/index.js';
 import { InMemoryTransport } from '@modelcontextprotocol/sdk/inMemory.js';
 

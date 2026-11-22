@@ -23,7 +23,7 @@ const result = await build({
   minify: true,
   // Sandboxed preloads can require `electron` and nothing else.
   external: ['electron'],
-  conditions: ['@eab/source'],
+  conditions: ['@electron-agent-bridge/source'],
   logLevel: 'warning',
   metafile: true,
 });
@@ -62,7 +62,7 @@ const worker = await build({
   platform: 'node',
   target: 'node20',
   minify: true,
-  conditions: ['@eab/source'],
+  conditions: ['@electron-agent-bridge/source'],
   logLevel: 'warning',
 });
 const workerSource = worker.outputFiles[0]?.text ?? '';

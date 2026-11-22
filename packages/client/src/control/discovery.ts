@@ -2,7 +2,7 @@ import { lstatSync, readdirSync, readFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 
-import { BridgeError, HandshakeSchema, endpointDirectory, type Handshake } from '@eab/core';
+import { BridgeError, HandshakeSchema, endpointDirectory, type Handshake } from '@electron-agent-bridge/core';
 
 /** A running app that has the bridge enabled. */
 export interface AppInstance {
