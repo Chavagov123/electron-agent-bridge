@@ -63,6 +63,11 @@ jobs:
         run: |
           version="$(node -p "require('./packages/mcp/package.json').version")"
           case "$version" in *-*) echo "Pre-release $version: not listed in the MCP registry."; exit 0 ;; esac
+          # The registry checks npm for the version: a new one can take minutes to be served.
+          for attempt in $(seq 1 60); do
+            npm view "@electron-agent-bridge/mcp@$version" version > /dev/null 2>&1 && break
+            echo "waiting for @electron-agent-bridge/mcp@$version on npm ($attempt)"; sleep 10
+          done
           curl -sSfL "https://github.com/modelcontextprotocol/registry/releases/latest/download/mcp-publisher_linux_amd64.tar.gz" | tar xz mcp-publisher
           ./mcp-publisher login github-oidc
           ./mcp-publisher publish
