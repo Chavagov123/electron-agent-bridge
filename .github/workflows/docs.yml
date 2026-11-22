@@ -27,6 +27,8 @@ jobs:
           node-version: 22
           cache: pnpm
       - run: pnpm install --frozen-lockfile
+      # TypeDoc reads the packages through their project references: build those first.
+      - run: pnpm run typecheck
       - run: pnpm run docs:api
       - uses: actions/configure-pages@v6
       - uses: actions/upload-pages-artifact@v5
