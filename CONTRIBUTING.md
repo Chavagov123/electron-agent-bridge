@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for helping. The short version:
+Thanks for helping. Everyone taking part follows the [code of conduct](CODE_OF_CONDUCT.md). The short version:
 
 1. `pnpm install`, then `pnpm check` must pass (format, lint, typecheck, dependency boundaries, unit tests
    with coverage floors).

@@ -1,0 +1,37 @@
+name: Bug report
+description: Something does not work as documented
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did, what you expected, and what happened instead. Include the error text.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: How to reproduce
+      description: The smallest app, flow or command that shows it.
+    validations:
+      required: true
+  - type: input
+    id: versions
+    attributes:
+      label: Versions
+      description: '@electron-agent-bridge/* version, Electron version, OS'
+      placeholder: 1.1.0, Electron 45, Windows 11
+    validations:
+      required: true
+  - type: dropdown
+    id: mode
+    attributes:
+      label: Mode
+      options: [Integrated, Launch, Attach, not sure]
+  - type: textarea
+    id: logs
+    attributes:
+      label: Output
+      description: '`eab doctor` and the failing command with its output. Leave out tokens and app secrets.'
+      render: text

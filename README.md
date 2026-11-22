@@ -93,7 +93,7 @@ await app.call('action.run', { actions: [{ type: 'click', locator: { role: 'butt
 | [Bundlers](docs/bundlers.md) | electron-vite, Forge, webpack |
 | [Security](docs/security.md) | threat model and capabilities; [SECURITY.md](SECURITY.md) for reports |
 | [Architecture](docs/architecture.md) | packages, data flow, design decisions (ADRs) |
-| API reference | `pnpm docs:api` (TypeDoc) |
+| [API reference](https://chavagov123.github.io/electron-agent-bridge/) | every exported function and type (TypeDoc; `pnpm docs:api` builds it locally) |
 
 ## Packages
 
