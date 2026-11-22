@@ -6,8 +6,10 @@
 // - --bin <entry>: an executable ESM entry with a shebang (repeatable).
 // - --cjs <entry>: an entry built as CommonJS only, e.g. a `--require` preload (repeatable).
 // Workspace imports resolve through the `@electron-agent-bridge/source` condition, so builds never depend on other dists.
+// An entry that imports another entry of the same build loads that entry's output at run time instead of
+// bundling a second copy of it (e.g. `register` → `./index.js`).
 import { cpSync, existsSync, readFileSync, readdirSync, rmSync, statSync, writeFileSync } from 'node:fs';
-import { join } from 'node:path';
+import { dirname, join, relative, resolve, sep } from 'node:path';
 import { build } from 'esbuild';
 
 const args = process.argv.slice(2);
@@ -48,12 +50,33 @@ const common = {
   outbase: 'src',
 };
 
+/** Imports of one entry by another resolve to the other's output (`extension`: `.js` or `.cjs`). */
+function shareEntries(group, extension) {
+  const files = new Set(group.map((entry) => resolve(entry)));
+  const output = (file) => relative(resolve('src'), file).replace(/\.ts$/, extension);
+  return {
+    name: 'share-entries',
+    setup(builder) {
+      builder.onResolve({ filter: /^\.\.?\// }, (args) => {
+        const target = resolve(args.resolveDir, args.path.replace(/\.js$/, '.ts'));
+        if (!files.has(args.importer) || !files.has(target) || target === args.importer) return undefined;
+        const path = relative(dirname(output(args.importer)), output(target))
+          .split(sep)
+          .join('/');
+        return { path: path.startsWith('.') ? path : `./${path}`, external: true };
+      });
+    },
+  };
+}
+
 rmSync('dist', { recursive: true, force: true });
 const builds = [];
 if (entries.length > 0) {
-  builds.push(build({ ...common, entryPoints: entries, format: 'esm', outExtension: { '.js': '.js' } }));
+  const esm = { entryPoints: entries, format: 'esm', outExtension: { '.js': '.js' } };
+  builds.push(build({ ...common, ...esm, plugins: [shareEntries(entries, '.js')] }));
   if (!esmOnly) {
-    builds.push(build({ ...common, entryPoints: entries, format: 'cjs', outExtension: { '.js': '.cjs' } }));
+    const cjs = { entryPoints: entries, format: 'cjs', outExtension: { '.js': '.cjs' } };
+    builds.push(build({ ...common, ...cjs, plugins: [shareEntries(entries, '.cjs')] }));
   }
 }
 if (cjsEntries.length > 0) {
