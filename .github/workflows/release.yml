@@ -44,6 +44,8 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           version="$(node -p "require('./packages/core/package.json').version")"
+          # The checkout has no tags: fetch them, or a rerun would create existing ones again.
+          git fetch --tags --quiet origin
           for manifest in packages/*/package.json; do
             spec="$(node -p "const p = require('./$manifest'); p.name + '@' + p.version")"
             git rev-parse -q --verify "refs/tags/$spec" > /dev/null || git tag "$spec"
