@@ -56,6 +56,12 @@ jobs:
           done
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-      # changesets publish creates @electron-agent-bridge/<package>@<version> tags locally; push them.
+      # One <name>@<version> tag per package on the released commit (changesets' own tags did not reach
+      # the push in CI), then push them.
       - if: ${{ !inputs.dry-run }}
-        run: git push origin --tags
+        run: |
+          for manifest in packages/*/package.json; do
+            spec="$(node -p "const p = require('./$manifest'); p.name + '@' + p.version")"
+            git rev-parse -q --verify "refs/tags/$spec" > /dev/null || git tag "$spec"
+          done
+          git push origin --tags
