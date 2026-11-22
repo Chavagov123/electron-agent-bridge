@@ -1,6 +1,6 @@
 # electron-agent-bridge
 
-[![npm](https://img.shields.io/npm/v/@electron-agent-bridge/electron/rc?label=npm%40rc)](https://www.npmjs.com/package/@electron-agent-bridge/electron)
+[![npm](https://img.shields.io/npm/v/@electron-agent-bridge/electron?label=npm)](https://www.npmjs.com/package/@electron-agent-bridge/electron)
 [![CI](https://github.com/Chavagov123/electron-agent-bridge/actions/workflows/ci.yml/badge.svg)](https://github.com/Chavagov123/electron-agent-bridge/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
@@ -23,12 +23,10 @@ Electron 35+ on Windows, macOS and Linux.
 
 ## Quick start
 
-> **Release candidate:** 1.1 is published under the `rc` tag until it is final, so install with `@rc`.
-
 **Integrated** (the app imports the bridge, which does nothing unless enabled):
 
 ```sh
-npm install --save-dev @electron-agent-bridge/electron@rc @electron-agent-bridge/mcp@rc
+npm install --save-dev @electron-agent-bridge/electron @electron-agent-bridge/mcp
 ```
 
 ```js
@@ -49,7 +47,7 @@ npx eab launch ./node_modules/.bin/electron -- .
 ```
 
 **For agents:** add the MCP server to your MCP host, e.g.
-`claude mcp add eab -- npx -y -p @electron-agent-bridge/mcp@rc eab-mcp` (or `npx eab-mcp` where `@electron-agent-bridge/mcp` is installed). The
+`claude mcp add eab -- npx -y @electron-agent-bridge/mcp` (or `npx eab-mcp` where `@electron-agent-bridge/mcp` is installed). The
 agent then has 14 tools: `session`, `targets`, `snapshot`, `find`, `act`, `wait_for`, `screenshot`,
 `logs`, `network`, `ipc`, `state`, `app`, and, where the app grants `eval`, `dialogs` and `eval`.
 

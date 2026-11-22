@@ -1,6 +1,6 @@
 {
   "name": "@electron-agent-bridge/core",
-  "version": "1.1.0-rc.0",
+  "version": "1.1.0",
   "description": "Shared contracts: protocol table, error codes, result envelopes, budgets and privacy helpers. Isomorphic; depends on zod only.",
   "license": "MIT",
   "author": "electron-agent-bridge contributors",

@@ -1,5 +1,15 @@
 # @electron-agent-bridge/mcp
 
+
+## 1.1.0
+
+First stable release: everything in 1.1.0-rc.0 (below), plus:
+
+### Patch Changes
+
+- `npx -y @electron-agent-bridge/mcp` starts the MCP server directly (the package also installs it as
+  `mcp`, next to `eab-mcp` and `eab`), and the package declares its MCP registry name.
+
 ## 1.1.0-rc.0
 
 ### Minor Changes

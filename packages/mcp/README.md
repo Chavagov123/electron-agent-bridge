@@ -1,6 +1,6 @@
 # @electron-agent-bridge/mcp
 
-[![npm](https://img.shields.io/npm/v/@electron-agent-bridge/mcp/rc?label=npm%40rc)](https://www.npmjs.com/package/@electron-agent-bridge/mcp)
+[![npm](https://img.shields.io/npm/v/@electron-agent-bridge/mcp?label=npm)](https://www.npmjs.com/package/@electron-agent-bridge/mcp)
 [![CI](https://github.com/Chavagov123/electron-agent-bridge/actions/workflows/ci.yml/badge.svg)](https://github.com/Chavagov123/electron-agent-bridge/actions/workflows/ci.yml)
 
 The MCP server (`eab-mcp`) and CLI (`eab`) of
@@ -14,10 +14,10 @@ The app runs the bridge runtime: either it imports
 ## MCP server
 
 ```sh
-claude mcp add eab -- npx -y -p @electron-agent-bridge/mcp@rc eab-mcp
+claude mcp add eab -- npx -y @electron-agent-bridge/mcp
 ```
 
-Any MCP host works the same way (command `npx`, args `-y -p @electron-agent-bridge/mcp@rc eab-mcp`;
+Any MCP host works the same way (command `npx`, args `-y @electron-agent-bridge/mcp`;
 just `eab-mcp` where the package is installed). The agent gets 14 tools: `session`, `targets`,
 `snapshot`, `find`, `act`, `wait_for`, `screenshot`, `logs`, `network`, `ipc`, `state`, `app`, and,
 where the app grants `eval`, `dialogs` and `eval`.
@@ -28,7 +28,7 @@ attach over a remote debugging port; without it those stay off.
 ## CLI
 
 ```sh
-npm install --save-dev @electron-agent-bridge/mcp@rc
+npm install --save-dev @electron-agent-bridge/mcp
 
 npx eab list                                   # apps with the bridge on
 npx eab snapshot                               # accessibility outline of the focused window

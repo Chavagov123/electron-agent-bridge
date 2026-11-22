@@ -1,6 +1,6 @@
 # @electron-agent-bridge/electron
 
-[![npm](https://img.shields.io/npm/v/@electron-agent-bridge/electron/rc?label=npm%40rc)](https://www.npmjs.com/package/@electron-agent-bridge/electron)
+[![npm](https://img.shields.io/npm/v/@electron-agent-bridge/electron?label=npm)](https://www.npmjs.com/package/@electron-agent-bridge/electron)
 [![CI](https://github.com/Chavagov123/electron-agent-bridge/actions/workflows/ci.yml/badge.svg)](https://github.com/Chavagov123/electron-agent-bridge/actions/workflows/ci.yml)
 
 The in-app runtime of [electron-agent-bridge](https://github.com/Chavagov123/electron-agent-bridge#readme):
@@ -13,10 +13,10 @@ private local socket with a token. Electron 35 or later.
 ## Install
 
 ```sh
-npm install --save-dev @electron-agent-bridge/electron@rc @electron-agent-bridge/mcp@rc
+npm install --save-dev @electron-agent-bridge/electron @electron-agent-bridge/mcp
 ```
 
-(`@rc` while 1.1 is a release candidate.) `@electron-agent-bridge/mcp` brings the `eab` CLI and the
+`@electron-agent-bridge/mcp` brings the `eab` CLI and the
 `eab-mcp` server that talk to the runtime.
 
 ## Use

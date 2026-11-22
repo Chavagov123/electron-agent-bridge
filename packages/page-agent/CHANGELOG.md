@@ -1,5 +1,10 @@
 # @electron-agent-bridge/page-agent
 
+
+## 1.1.0
+
+First stable release: everything in 1.1.0-rc.0 (below).
+
 ## 1.1.0-rc.0
 
 ### Minor Changes

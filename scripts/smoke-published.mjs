@@ -3,7 +3,7 @@
 // tiny app that imports `@electron-agent-bridge/electron/register`, and check that `eab list` finds it
 // and `eab snapshot` sees its button. CI tests the workspace build; this tests the published tarballs.
 //
-// Usage: node scripts/smoke-published.mjs [dist-tag or version, default rc] [Electron major, default 45]
+// Usage: node scripts/smoke-published.mjs [dist-tag or version, default latest] [Electron major, default 45]
 // Linux needs a display (run under xvfb-run).
 import { execFileSync, spawn } from 'node:child_process';
 import { mkdtempSync, rmSync, writeFileSync } from 'node:fs';
@@ -11,7 +11,7 @@ import { createRequire } from 'node:module';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 
-const [tag = 'rc', electronMajor = '45'] = process.argv.slice(2);
+const [tag = 'latest', electronMajor = '45'] = process.argv.slice(2);
 const windows = process.platform === 'win32';
 const project = mkdtempSync(join(tmpdir(), 'eab-smoke-'));
 // A private endpoint directory: `eab list` sees only this app.

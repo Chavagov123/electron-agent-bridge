@@ -1,13 +1,13 @@
 # @electron-agent-bridge/attach
 
-[![npm](https://img.shields.io/npm/v/@electron-agent-bridge/attach/rc?label=npm%40rc)](https://www.npmjs.com/package/@electron-agent-bridge/attach)
+[![npm](https://img.shields.io/npm/v/@electron-agent-bridge/attach?label=npm)](https://www.npmjs.com/package/@electron-agent-bridge/attach)
 
 Attach mode of [electron-agent-bridge](https://github.com/Chavagov123/electron-agent-bridge#readme): drive the pages of an Electron app that is
 already running with `--remote-debugging-port`, without any bridge code inside the app. The engine runs
 in your process; main-process features (IPC, main logs, windows, `eval`) need Integrated or Launch mode.
 
 ```sh
-npm install --save-dev @electron-agent-bridge/attach@rc
+npm install --save-dev @electron-agent-bridge/attach
 ```
 
 ```ts

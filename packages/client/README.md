@@ -1,12 +1,12 @@
 # @electron-agent-bridge/client
 
-[![npm](https://img.shields.io/npm/v/@electron-agent-bridge/client/rc?label=npm%40rc)](https://www.npmjs.com/package/@electron-agent-bridge/client)
+[![npm](https://img.shields.io/npm/v/@electron-agent-bridge/client?label=npm)](https://www.npmjs.com/package/@electron-agent-bridge/client)
 
 The Node API of [electron-agent-bridge](https://github.com/Chavagov123/electron-agent-bridge#readme): connect to an Electron app running the bridge,
 or launch one with it, and call the protocol with typed results.
 
 ```sh
-npm install --save-dev @electron-agent-bridge/client@rc
+npm install --save-dev @electron-agent-bridge/client
 ```
 
 ```ts

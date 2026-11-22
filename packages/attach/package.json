@@ -1,6 +1,6 @@
 {
   "name": "@electron-agent-bridge/attach",
-  "version": "1.1.0-rc.0",
+  "version": "1.1.0",
   "description": "Attach mode: drive the renderers of a running Electron app over its remote debugging port, without the in-app runtime.",
   "license": "MIT",
   "author": "electron-agent-bridge contributors",

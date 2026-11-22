@@ -1,6 +1,6 @@
 {
   "name": "@electron-agent-bridge/client",
-  "version": "1.1.0-rc.0",
+  "version": "1.1.0",
   "description": "Programmatic Node API: connect to or launch an app, typed BridgeApi, flow runner.",
   "license": "MIT",
   "author": "electron-agent-bridge contributors",
