@@ -24,9 +24,9 @@ jobs:
       EAB_OSS: '1'
       EAB_E2E_ELECTRON: ${{ matrix.electron }}
     steps:
-      - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6
+      - uses: actions/setup-node@v7
         with:
           # Some pinned apps require Node 24 for their own tooling (devEngines).
           node-version: 24

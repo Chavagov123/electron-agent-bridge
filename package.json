@@ -26,7 +26,7 @@
     "docs:api": "typedoc",
     "changeset": "changeset",
     "version-packages": "changeset version && pnpm install --no-frozen-lockfile",
-    "release": "pnpm run check:packages && changeset publish",
+    "release": "pnpm run check:packages && node scripts/publish-packages.mjs",
     "hooks": "lefthook install"
   },
   "devDependencies": {
