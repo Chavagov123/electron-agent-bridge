@@ -25,7 +25,7 @@
     "check:packages": "pnpm run build && pnpm -r --filter \"./packages/**\" run check:package",
     "docs:api": "typedoc",
     "changeset": "changeset",
-    "version-packages": "changeset version && pnpm install --no-frozen-lockfile",
+    "version-packages": "changeset version && node scripts/sync-server-json.mjs && pnpm install --no-frozen-lockfile",
     "release": "pnpm run check:packages && node scripts/publish-packages.mjs",
     "hooks": "lefthook install"
   },

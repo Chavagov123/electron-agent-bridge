@@ -1,0 +1,24 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.Chavagov123/electron-agent-bridge",
+  "title": "Electron Agent Bridge",
+  "description": "See and drive any Electron app: pages, IPC, logs, network, state and main process.",
+  "repository": {
+    "url": "https://github.com/Chavagov123/electron-agent-bridge",
+    "source": "github"
+  },
+  "websiteUrl": "https://github.com/Chavagov123/electron-agent-bridge#readme",
+  "version": "1.1.0-rc.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "@electron-agent-bridge/mcp",
+      "version": "1.1.0-rc.0",
+      "runtimeHint": "npx",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}

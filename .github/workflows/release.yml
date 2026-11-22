@@ -56,3 +56,13 @@ jobs:
             case "$version" in *-*) pre="--prerelease" ;; esac
             gh release create "v$version" --title "v$version" --notes-file "$RUNNER_TEMP/notes.md" $pre
           fi
+      # The MCP registry entry (server.json), for stable versions. The registry checks `mcpName` in the
+      # published @electron-agent-bridge/mcp; GitHub's OIDC token proves the io.github.Chavagov123 namespace.
+      - name: MCP registry
+        if: ${{ !inputs.dry-run }}
+        run: |
+          version="$(node -p "require('./packages/mcp/package.json').version")"
+          case "$version" in *-*) echo "Pre-release $version: not listed in the MCP registry."; exit 0 ;; esac
+          curl -sSfL "https://github.com/modelcontextprotocol/registry/releases/latest/download/mcp-publisher_linux_amd64.tar.gz" | tar xz mcp-publisher
+          ./mcp-publisher login github-oidc
+          ./mcp-publisher publish
