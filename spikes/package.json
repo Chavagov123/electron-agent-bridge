@@ -1,0 +1,10 @@
+{
+  "name": "eab-spikes",
+  "private": true,
+  "description": "Phase-0 throwaway spikes. Never published; deleted at 1.0.",
+  "type": "commonjs",
+  "devDependencies": {
+    "electron-35": "npm:electron@35.7.5",
+    "electron-45": "npm:electron@45.0.0"
+  }
+}

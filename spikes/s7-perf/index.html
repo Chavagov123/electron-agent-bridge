@@ -1,0 +1,12 @@
+<!doctype html><html><head><meta charset="utf-8"><title>S7 heavy</title></head><body>
+<nav><a href="#a">Home</a><a href="#b">Reports</a></nav><main id="m"><h1>Heavy page</h1></main>
+<script>
+// Deterministic ~5k-node page: 500 rows x ~10 nodes.
+const m = document.getElementById('m');
+for (let i = 0; i < 500; i += 1) {
+  const row = document.createElement('div'); row.className = 'row';
+  row.innerHTML = `<span>Row ${i}</span><div><em>meta ${i}</em><small>${i % 7}</small></div>` +
+    `<input placeholder="qty ${i}"><button>Save ${i}</button><a href="#r${i}">Open</a><i></i>`;
+  m.appendChild(row);
+}
+</script></body></html>

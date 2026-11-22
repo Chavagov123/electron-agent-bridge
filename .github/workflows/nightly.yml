@@ -1,0 +1,69 @@
+name: nightly
+
+# The wide matrix: every supported Electron major on every OS, plus the compatibility test
+# (current client against the runtime of the last release tag). PRs run the narrow matrix in ci.yml.
+on:
+  schedule:
+    - cron: '17 2 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  e2e:
+    name: e2e Electron ${{ matrix.electron }} (${{ matrix.os }})
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        electron: ['35', '39', '43', '44', '45']
+    runs-on: ${{ matrix.os }}
+    env:
+      EAB_E2E_ELECTRON: ${{ matrix.electron }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      # 35 and 45 come with the e2e package; the others are installed for this job only.
+      - if: matrix.electron != '35' && matrix.electron != '45'
+        run: node e2e/scripts/install-electron.mjs ${{ matrix.electron }}
+      - if: runner.os == 'Linux'
+        run: sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
+      - if: runner.os == 'Linux'
+        run: xvfb-run -a --server-args="-screen 0 1280x800x24" pnpm run test:e2e
+      - if: runner.os != 'Linux'
+        run: pnpm run test:e2e
+
+  compat:
+    name: compat (runtime of the last release × current client)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - name: Find the last release
+        id: release
+        # changesets tags each published package as @eab/<package>@<version>.
+        run: echo "tag=$(git describe --tags --abbrev=0 --match '@eab/electron@*' 2>/dev/null || true)" >> "$GITHUB_OUTPUT"
+      - if: steps.release.outputs.tag == ''
+        run: echo "No release tag yet; nothing to check compatibility against."
+      - if: steps.release.outputs.tag != ''
+        run: sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
+      - if: steps.release.outputs.tag != ''
+        run: |
+          pnpm run build
+          # A plain assignment keeps the build's exit status (export would hide it from `bash -e`).
+          runtime="$(node e2e/compat/build-runtime.mjs '${{ steps.release.outputs.tag }}')"
+          export EAB_COMPAT_RUNTIME="$runtime"
+          EAB_E2E_ELECTRON=35,45 xvfb-run -a --server-args="-screen 0 1280x800x24" pnpm exec vitest run --project e2e e2e/specs/compat.e2e.ts

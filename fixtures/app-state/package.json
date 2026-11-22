@@ -1,0 +1,21 @@
+{
+  "name": "@eab-fixtures/app-state",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Fixture: Redux Toolkit (devtools on and off), Zustand (devtools middleware and plain), MobX and generic stores; an application menu, native dialogs and windows for main-process control.",
+  "license": "MIT",
+  "main": "main.cjs",
+  "scripts": {
+    "build": "node build.mjs"
+  },
+  "dependencies": {
+    "@eab-fixtures/fixture-kit": "workspace:*",
+    "@eab/electron": "workspace:*"
+  },
+  "devDependencies": {
+    "@reduxjs/toolkit": "2.5.0",
+    "esbuild": "0.28.2",
+    "mobx": "6.13.5",
+    "zustand": "5.0.3"
+  }
+}

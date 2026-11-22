@@ -1,0 +1,9 @@
+{
+  "name": "@eab-fixtures/fixture-kit",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Shared helpers for deterministic e2e fixture apps.",
+  "license": "MIT",
+  "type": "commonjs",
+  "main": "index.cjs"
+}

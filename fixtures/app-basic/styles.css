@@ -1,0 +1,61 @@
+body {
+  font:
+    14px/1.4 system-ui,
+    sans-serif;
+  margin: 16px;
+}
+nav a {
+  margin-right: 12px;
+}
+form {
+  display: grid;
+  grid-template-columns: 140px 320px;
+  gap: 8px;
+  align-items: center;
+  max-width: 520px;
+}
+fieldset,
+#editor,
+form > button {
+  grid-column: 1 / -1;
+}
+#editor {
+  min-height: 40px;
+  border: 1px solid #999;
+  padding: 4px;
+}
+#toast:empty {
+  display: none;
+}
+#toast {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  padding: 8px 12px;
+  background: #222;
+  color: #fff;
+}
+#confirm {
+  position: fixed;
+  inset: 30% 30% auto;
+  padding: 16px;
+  background: #fff;
+  border: 2px solid #333;
+}
+#done {
+  min-height: 40px;
+  border: 1px dashed #999;
+  margin: 8px 0;
+}
+.covered-wrap {
+  position: relative;
+  display: inline-block;
+}
+#overlay {
+  position: absolute;
+  inset: 0;
+  background: rgb(0 0 0 / 30%);
+}
+#spacer {
+  height: 2000px;
+}

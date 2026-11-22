@@ -1,0 +1,6 @@
+# Fails on purpose: the text never appears. Leaves failure artifacts; the last step is skipped.
+name: Expect something that never happens
+steps:
+  - expect: { text: This text is never shown }
+    timeoutMs: 300
+  - reset: true

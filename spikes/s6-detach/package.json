@@ -1,0 +1,1 @@
+{ "name": "s6-detach", "main": "main.js", "private": true }

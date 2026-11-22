@@ -1,0 +1,21 @@
+{
+  "name": "@eab-fixtures/app-components",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Fixture: a React 19 and a Vue 3 component tree on one page, for reading component state (state.component).",
+  "license": "MIT",
+  "main": "main.cjs",
+  "scripts": {
+    "build": "node build.mjs"
+  },
+  "dependencies": {
+    "@eab-fixtures/fixture-kit": "workspace:*",
+    "@eab/electron": "workspace:*"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2",
+    "react": "19.2.9",
+    "react-dom": "19.2.9",
+    "vue": "3.5.44"
+  }
+}

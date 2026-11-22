@@ -1,0 +1,65 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    name: lint · typecheck · boundaries · unit (${{ matrix.os }})
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm run format:check
+      - run: pnpm run lint
+      - run: pnpm run typecheck
+      - run: pnpm run boundaries
+      - run: pnpm run test
+
+  e2e:
+    name: e2e Electron ${{ matrix.electron }} (${{ matrix.os }})
+    needs: check
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - { os: ubuntu-latest, electron: '45' }
+          - { os: windows-latest, electron: '45' }
+          - { os: macos-latest, electron: '45' }
+          - { os: ubuntu-latest, electron: '35' }
+    runs-on: ${{ matrix.os }}
+    env:
+      EAB_E2E_ELECTRON: ${{ matrix.electron }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      # Ubuntu 24.04 restricts unprivileged user namespaces, which Chromium's sandbox needs.
+      - if: runner.os == 'Linux'
+        run: sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
+      - if: runner.os == 'Linux'
+        run: xvfb-run -a --server-args="-screen 0 1280x800x24" pnpm run test:e2e
+      - if: runner.os != 'Linux'
+        run: pnpm run test:e2e

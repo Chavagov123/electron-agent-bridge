@@ -1,0 +1,11 @@
+node_modules
+dist
+coverage
+pnpm-lock.yaml
+spikes
+*.md
+packages/page-agent/src/generated/
+docs/api
+.compat
+.electron
+.oss

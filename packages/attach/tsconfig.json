@@ -1,0 +1,17 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": ".tsbuild",
+    "emitDeclarationOnly": true,
+    "lib": ["ES2023", "DOM"],
+    "types": ["node"]
+  },
+  "include": ["src"],
+  "references": [
+    { "path": "../core" },
+    { "path": "../page-agent" },
+    { "path": "../engine" },
+    { "path": "../client" }
+  ]
+}

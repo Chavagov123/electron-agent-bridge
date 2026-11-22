@@ -1,0 +1,104 @@
+{
+  "name": "@eab/electron",
+  "version": "1.1.0-rc.0",
+  "description": "In-app runtime for the Electron main process, preload and renderer. Off unless explicitly enabled.",
+  "license": "MIT",
+  "author": "electron-agent-bridge contributors",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chavagov123/electron-agent-bridge.git",
+    "directory": "packages/electron"
+  },
+  "homepage": "https://github.com/Chavagov123/electron-agent-bridge#readme",
+  "bugs": "https://github.com/Chavagov123/electron-agent-bridge/issues",
+  "keywords": [
+    "electron",
+    "automation",
+    "testing",
+    "debugging",
+    "ai-agent",
+    "mcp"
+  ],
+  "type": "module",
+  "sideEffects": [
+    "./dist/register.js",
+    "./dist/register.cjs",
+    "./src/register.ts"
+  ],
+  "main": "./dist/index.cjs",
+  "types": "./dist/index.d.cts",
+  "module": "./dist/index.js",
+  "exports": {
+    ".": {
+      "@eab/source": "./src/index.ts",
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./register": {
+      "@eab/source": "./src/register.ts",
+      "import": {
+        "types": "./dist/register.d.ts",
+        "default": "./dist/register.js"
+      },
+      "require": {
+        "types": "./dist/register.d.cts",
+        "default": "./dist/register.cjs"
+      }
+    },
+    "./renderer": {
+      "@eab/source": "./src/renderer.ts",
+      "import": {
+        "types": "./dist/renderer.d.ts",
+        "default": "./dist/renderer.js"
+      },
+      "require": {
+        "types": "./dist/renderer.d.cts",
+        "default": "./dist/renderer.cjs"
+      }
+    },
+    "./inject": {
+      "types": "./dist/inject.d.cts",
+      "require": "./dist/inject.cjs",
+      "default": "./dist/inject.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "!dist/**/*.map"
+  ],
+  "scripts": {
+    "build": "node ../../scripts/build-package.mjs --self-contained --cjs src/inject.ts src/index.ts src/register.ts src/renderer.ts",
+    "check:package": "publint --strict && attw --pack . --profile node16"
+  },
+  "dependencies": {
+    "@eab/core": "workspace:*",
+    "@eab/engine": "workspace:*",
+    "@eab/page-agent": "workspace:*"
+  },
+  "peerDependencies": {
+    "electron": ">=35.0.0"
+  },
+  "peerDependenciesMeta": {
+    "electron": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "electron": "45.0.0",
+    "esbuild": "0.28.2"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  }
+}

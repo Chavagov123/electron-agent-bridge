@@ -1,0 +1,41 @@
+name: oss-apps
+
+# The OSS suite: pinned open-source Electron apps (e2e/oss/apps.json), unmodified, in Launch mode.
+# Weekly and on demand; non-blocking (it builds third-party code, which can break for reasons of its own).
+on:
+  schedule:
+    - cron: '41 3 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  oss:
+    name: OSS apps on Electron ${{ matrix.electron }} (${{ matrix.os }})
+    continue-on-error: true
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        electron: ['45']
+    runs-on: ${{ matrix.os }}
+    env:
+      EAB_OSS: '1'
+      EAB_E2E_ELECTRON: ${{ matrix.electron }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          # Some pinned apps require Node 24 for their own tooling (devEngines).
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm run build
+      - if: runner.os == 'Linux'
+        run: sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
+      - if: runner.os == 'Linux'
+        run: xvfb-run -a --server-args="-screen 0 1280x800x24" pnpm exec vitest run --project e2e e2e/specs/oss.e2e.ts
+      - if: runner.os != 'Linux'
+        run: pnpm exec vitest run --project e2e e2e/specs/oss.e2e.ts

@@ -1,0 +1,15 @@
+# Launches app-state itself (paths from the environment) and closes it afterwards.
+name: Session, preferences and dialogs
+app:
+  launch:
+    executable: ${env.EAB_FLOW_ELECTRON}
+    args: ['${env.EAB_FLOW_APP}']
+    allowEval: true
+steps:
+  - expect: { state: { store: session, path: loggedIn, equals: false } }
+  - stub: { method: showOpenDialog, response: { filePaths: [/tmp/report.csv] } }
+  - menu: [File, Open…]
+  - name: theme stays light
+    expect: { state: { store: prefs, path: theme, equals: light } }
+  - act: { type: click, locator: { role: button, name: Finish first todo } }
+  - expect: { state: { store: todos, path: 'items[0].done', equals: true } }

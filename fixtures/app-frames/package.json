@@ -1,0 +1,12 @@
+{
+  "name": "@eab-fixtures/app-frames",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Fixture: a page over local HTTP with a cross-site iframe, a dedicated worker and a service worker (child sessions).",
+  "license": "MIT",
+  "main": "main.cjs",
+  "dependencies": {
+    "@eab-fixtures/fixture-kit": "workspace:*",
+    "@eab/electron": "workspace:*"
+  }
+}

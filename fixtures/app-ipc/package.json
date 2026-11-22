@@ -1,0 +1,12 @@
+{
+  "name": "@eab-fixtures/app-ipc",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Fixture: every IPC pattern (handle, on, once, sendSync, removal, webContents.ipc, outbound, bursts), with behaviour digests for transparency tests.",
+  "license": "MIT",
+  "main": "main.cjs",
+  "dependencies": {
+    "@eab-fixtures/fixture-kit": "workspace:*",
+    "@eab/electron": "workspace:*"
+  }
+}

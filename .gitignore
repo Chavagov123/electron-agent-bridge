@@ -1,0 +1,19 @@
+node_modules/
+dist/
+coverage/
+*.log
+*.tsbuildinfo
+.spike-out/
+.eab-artifacts/
+.tsbuild/
+
+# Generated page-agent bundle (pnpm gen)
+packages/page-agent/src/generated/
+packages/electron/src/generated/
+.compat/
+.electron/
+.oss/
+docs/api/
+
+# Playwright tests exported by the e2e suite
+e2e/.playwright/

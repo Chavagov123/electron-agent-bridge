@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; style-src 'self' 'unsafe-inline'"
+    />
+    <title>app-basic</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav aria-label="Primary">
+        <a href="#home" id="nav-home">Home</a>
+        <a href="#orders" id="nav-orders">Orders</a>
+        <a href="#settings" id="nav-settings">Settings</a>
+      </nav>
+    </header>
+    <main>
+      <h1>Basic fixture</h1>
+      <form id="order-form" aria-label="New order">
+        <label for="customer">Customer</label>
+        <input id="customer" name="customer" placeholder="Customer name" />
+
+        <label for="quantity">Quantity</label>
+        <input id="quantity" name="quantity" type="number" min="1" value="1" />
+
+        <label for="notes">Notes</label>
+        <textarea id="notes" name="notes"></textarea>
+
+        <label for="priority">Priority</label>
+        <select id="priority" name="priority">
+          <option value="low">Low</option>
+          <option value="normal" selected>Normal</option>
+          <option value="high">High</option>
+        </select>
+
+        <fieldset>
+          <legend>Delivery</legend>
+          <label><input type="radio" name="delivery" value="pickup" checked /> Pickup</label>
+          <label><input type="radio" name="delivery" value="courier" /> Courier</label>
+        </fieldset>
+
+        <label><input id="gift" type="checkbox" name="gift" /> Gift wrap</label>
+
+        <label for="attachment">Attachment</label>
+        <input id="attachment" type="file" />
+
+        <div id="editor" contenteditable="true" role="textbox" aria-label="Rich notes"></div>
+
+        <button id="save" type="submit">Save order</button>
+        <button id="disabled-action" type="button" disabled>Archive</button>
+        <button id="open-dialog" type="button">Delete…</button>
+      </form>
+
+      <section aria-label="Orders">
+        <ul id="orders"></ul>
+      </section>
+
+      <section aria-label="Playground">
+        <div id="card" draggable="true" role="listitem" aria-label="Card A">Card A</div>
+        <ul id="done" aria-label="Done"></ul>
+        <div class="covered-wrap">
+          <button id="covered" type="button">Covered</button>
+          <div id="overlay" role="note" aria-label="Busy overlay"></div>
+        </div>
+        <button id="break" type="button">Break things</button>
+        <div id="spacer"></div>
+        <button id="far" type="button">Far button</button>
+      </section>
+
+      <div id="toast" role="status" aria-live="polite"></div>
+
+      <div id="confirm" role="alertdialog" aria-modal="true" aria-labelledby="confirm-title" hidden>
+        <h2 id="confirm-title">Delete order?</h2>
+        <button id="confirm-yes" type="button">Yes, delete</button>
+        <button id="confirm-no" type="button">Cancel</button>
+      </div>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,6 @@
+<!doctype html><html><body style="margin:0">
+<button id="topbtn" style="position:absolute;left:20px;top:20px;width:120px;height:40px">Top</button>
+<iframe id="oopif" src="CROSS/frame.html?who=oopif" style="position:absolute;left:20px;top:100px;width:300px;height:150px;border:0"></iframe>
+<webview id="wv" src="SAME/frame.html?who=webview" style="position:absolute;left:20px;top:300px;width:300px;height:150px"></webview>
+<script>document.getElementById('topbtn').addEventListener('click', (e) => fetch('/click?who=top&trusted=' + e.isTrusted));</script>
+</body></html>

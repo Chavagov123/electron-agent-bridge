@@ -1,0 +1,12 @@
+{
+  "name": "@eab-fixtures/app-multi",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Fixture: two windows (one hidden, explicitly named), a WebContentsView and a <webview>.",
+  "license": "MIT",
+  "main": "main.cjs",
+  "dependencies": {
+    "@eab-fixtures/fixture-kit": "workspace:*",
+    "@eab/electron": "workspace:*"
+  }
+}

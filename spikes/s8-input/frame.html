@@ -1,0 +1,7 @@
+<!doctype html><html><body style="margin:0">
+<button id="btn" style="position:absolute;left:30px;top:30px;width:120px;height:40px">Inner</button>
+<script>
+const who = new URLSearchParams(location.search).get('who');
+window.__clicks = [];
+document.getElementById('btn').addEventListener('click', (e) => { window.__clicks.push(e.isTrusted); }); document.getElementById('btn').addEventListener('click', (e) => fetch('/click?who=' + who + '&trusted=' + e.isTrusted, { mode: 'no-cors' }));
+</script></body></html>

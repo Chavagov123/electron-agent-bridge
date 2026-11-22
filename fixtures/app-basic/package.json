@@ -1,0 +1,12 @@
+{
+  "name": "@eab-fixtures/app-basic",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Fixture: forms, controls, links, dialogs, toasts, shortcuts.",
+  "license": "MIT",
+  "main": "main.cjs",
+  "dependencies": {
+    "@eab-fixtures/fixture-kit": "workspace:*",
+    "@eab/electron": "workspace:*"
+  }
+}

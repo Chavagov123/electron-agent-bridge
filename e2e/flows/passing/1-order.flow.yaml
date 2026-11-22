@@ -1,0 +1,12 @@
+# Runs against a running app-basic (eab run --pid N).
+name: Place an order
+timeoutMs: 5000
+steps:
+  - name: fill and save the order form
+    act:
+      - { type: fill, locator: { role: textbox, name: Customer }, value: Ada }
+      - { type: click, locator: { role: button, name: Save order } }
+  - expect: { text: Order saved }
+  - expect: { element: { text: Ada x1 }, state: visible }
+  - expect: { noConsoleErrors: true }
+  - screenshot: { file: order.png }

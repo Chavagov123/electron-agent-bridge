@@ -1,0 +1,12 @@
+{
+  "name": "@eab-fixtures/app-logs",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Fixture: console output and crashes in main and renderer, process events, a custom logger and HTTP requests, with behaviour digests for transparency tests.",
+  "license": "MIT",
+  "main": "main.cjs",
+  "dependencies": {
+    "@eab-fixtures/fixture-kit": "workspace:*",
+    "@eab/electron": "workspace:*"
+  }
+}

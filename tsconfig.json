@@ -1,0 +1,13 @@
+{
+  "files": [],
+  "references": [
+    { "path": "packages/core" },
+    { "path": "packages/page-agent" },
+    { "path": "packages/engine" },
+    { "path": "packages/electron" },
+    { "path": "packages/client" },
+    { "path": "packages/attach" },
+    { "path": "packages/mcp" },
+    { "path": "e2e" }
+  ]
+}

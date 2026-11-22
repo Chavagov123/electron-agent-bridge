@@ -1,0 +1,42 @@
+name: release
+
+# Publishes the @eab/* packages with npm provenance. Manual only; `dry-run` (the default) packs and
+# checks everything without publishing. Versions come from changesets (`pnpm version-packages`).
+on:
+  workflow_dispatch:
+    inputs:
+      dry-run:
+        description: 'Pack and check only, do not publish'
+        type: boolean
+        default: true
+
+permissions:
+  # Pushing the release tags (the nightly compat job tests against the last one).
+  contents: write
+  id-token: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+          registry-url: https://registry.npmjs.org
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm check
+      # Builds, then publint + arethetypeswrong for every package.
+      - run: pnpm run check:packages
+      - if: inputs.dry-run
+        run: pnpm -r --filter "./packages/**" publish --dry-run --no-git-checks
+      - if: ${{ !inputs.dry-run }}
+        run: pnpm exec changeset publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_CONFIG_PROVENANCE: 'true'
+      # changesets publish creates @eab/<package>@<version> tags locally; push them.
+      - if: ${{ !inputs.dry-run }}
+        run: git push origin --tags

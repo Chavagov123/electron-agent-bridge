@@ -1,0 +1,12 @@
+{
+  "name": "@eab-fixtures/app-heavy",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Fixture: ~5000 elements (tables, lists, forms) and a mutation generator, for snapshot performance.",
+  "license": "MIT",
+  "main": "main.cjs",
+  "dependencies": {
+    "@eab-fixtures/fixture-kit": "workspace:*",
+    "@eab/electron": "workspace:*"
+  }
+}

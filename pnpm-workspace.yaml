@@ -1,0 +1,23 @@
+packages:
+  - packages/*
+  - fixtures/*
+  - e2e
+
+# Only Electron may run its install script (it downloads the Electron binary).
+allowBuilds:
+  electron: true
+  # esbuild ships its binary as an optional dependency; its postinstall only re-validates it.
+  esbuild: false
+  # Its postinstall would install git hooks silently; `pnpm hooks` installs them on request.
+  lefthook: false
+  unrs-resolver: false
+
+# Keep the typescript-eslint family on one release so pnpm's minimum-release-age guard needs no exclusions.
+overrides:
+  '@typescript-eslint/project-service': 8.72.0
+  '@typescript-eslint/scope-manager': 8.72.0
+  '@typescript-eslint/tsconfig-utils': 8.72.0
+  '@typescript-eslint/types': 8.72.0
+  '@typescript-eslint/typescript-estree': 8.72.0
+  '@typescript-eslint/utils': 8.72.0
+  '@typescript-eslint/visitor-keys': 8.72.0

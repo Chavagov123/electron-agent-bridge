@@ -1,0 +1,3 @@
+name: Invalid flow
+steps:
+  - teleport: { to: nowhere }

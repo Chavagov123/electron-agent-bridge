@@ -1,0 +1,15 @@
+{
+  "name": "@eab-fixtures/app-bundled",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Fixture: a main process bundled with esbuild (as electron-vite, Forge or webpack would), with @eab/electron inlined into the bundle or kept external.",
+  "license": "MIT",
+  "main": "launcher.cjs",
+  "dependencies": {
+    "@eab-fixtures/fixture-kit": "workspace:*",
+    "@eab/electron": "workspace:*"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "name": "electron-agent-bridge",
+  "entryPointStrategy": "packages",
+  "entryPoints": [
+    "packages/core",
+    "packages/electron",
+    "packages/client",
+    "packages/mcp",
+    "packages/engine",
+    "packages/attach"
+  ],
+  "packageOptions": { "entryPoints": ["src/index.ts"], "tsconfig": "tsconfig.json" },
+  "out": "docs/api",
+  "readme": "README.md",
+  "excludePrivate": true,
+  "excludeInternal": true,
+  "gitRevision": "main",
+  "validation": { "notExported": false, "invalidLink": true }
+}
